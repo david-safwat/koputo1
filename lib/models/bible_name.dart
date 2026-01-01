@@ -1,0 +1,136 @@
+class Biblename {
+  final String id;
+  final String title;
+
+  const Biblename({
+    required this.id,
+    required this.title,
+  });
+}
+
+//list of bible
+const Bible_name = [
+  Biblename(id: 'b1', title: '創世記'),
+  Biblename(id: 'b2', title: '出エジプト記'),
+  Biblename(id: 'b3', title: 'レビ記'),
+  Biblename(id: 'b4', title: '民数記'),
+  Biblename(id: 'b5', title: '申命記'),
+  Biblename(id: 'b6', title: 'ヨシュア記'),
+  Biblename(id: 'b7', title: '士師記'),
+  Biblename(id: 'b7', title: 'ルツ記'),
+  Biblename(id: 'b9', title: 'サムエル記上'),
+  Biblename(id: 'b10', title: 'サムエル記下'),
+  Biblename(id: 'b11', title: '列王記上'),
+  Biblename(id: 'b12', title: '列王記下'),
+  Biblename(id: 'b13', title: '歴代誌上'),
+  Biblename(id: 'b14', title: '歴代誌下'),
+  Biblename(id: 'b15', title: 'エズラ記'),
+  Biblename(id: 'b16', title: 'ネヘミヤ記'),
+  Biblename(id: 'b17', title: 'トビト記'),
+  Biblename(id: 'b18', title: 'ユディト記'),
+  Biblename(id: 'b19', title: 'マカバイ記'),
+  Biblename(id: 'b20', title: 'マカバイ記'),
+  Biblename(id: 'b21', title: 'ヨブ記'),
+  Biblename(id: 'b22', title: '詩編'),
+  Biblename(id: 'b23', title: '箴言'),
+  Biblename(id: 'b24', title: 'コヘレトの言葉'),
+  Biblename(id: 'b25', title: '雅歌'),
+  Biblename(id: 'b26', title: '知恵の書'),
+  Biblename(id: 'b27', title: 'シラ書'),
+  Biblename(id: 'b28', title: 'マタイによる福音書'),
+  Biblename(id: 'b29', title: 'マルコによる福音書'),
+  Biblename(id: 'b230', title: 'ルカによる福音書'),
+  Biblename(id: 'b31', title: 'ヨハネによる福音書'),
+  Biblename(id: 'b32', title: '使徒言行録'),
+  Biblename(id: 'b33', title: 'ローマの信徒への手紙'),
+  Biblename(id: 'b34', title: 'コリントの信徒への手紙一'),
+  Biblename(id: 'b35', title: 'コリントの信徒への手紙二'),
+  Biblename(id: 'b36', title: 'ガラテヤの信徒への手紙'),
+  Biblename(id: 'b37', title: 'エフェソの信徒への手紙'),
+  Biblename(id: 'b38', title: 'フィリピの信徒への手紙'),
+  Biblename(id: 'b39', title: 'コロサイの信徒への手紙'),
+  Biblename(id: 'b40', title: 'テサロニケの信徒への手紙一'),
+  Biblename(id: 'b41', title: 'テサロニケの信徒への手紙二'),
+  Biblename(id: 'b42', title: 'テモテへの手紙一'),
+  Biblename(id: 'b43', title: 'テモテへの手紙二'),
+  Biblename(id: 'b44', title: 'テトスへの手紙'),
+  Biblename(id: 'b45', title: 'フィレモンへの手紙'),
+  Biblename(id: 'b46', title: 'ヘブライ人への手紙'),
+  Biblename(id: 'b47', title: 'ヤコブの手紙'),
+  Biblename(id: 'b48', title: 'ペトロの手紙一'),
+  Biblename(id: 'b49', title: 'ペトロの手紙二'),
+  Biblename(id: 'b50', title: 'ヨハネの手紙一'),
+  Biblename(id: 'b51', title: 'ヨハネの手紙二'),
+  Biblename(id: 'b52', title: 'ヨハネの手紙三'),
+  Biblename(id: 'b53', title: 'ユダの手紙'),
+  Biblename(id: 'b54', title: 'ヨハネの黙示録'),
+];
+
+class selectchapters {
+  final String id;
+  final List<String> chapternumber;
+  final String chaptercataogry;
+
+  const selectchapters(
+      {required this.id,
+      required this.chapternumber,
+      required this.chaptercataogry});
+}
+
+const bible_chapters = [
+  selectchapters(
+      id: 'ch1',
+      chapternumber: [
+        'Chapter 1',
+        'Chapter 2',
+        'Chapter 3',
+        'Chapter 4',
+        'Chapter 5',
+        'Chapter 6',
+        'Chapter 7',
+        'Chapter 8',
+        'Chapter 9',
+        'Chapter 10',
+        'Chapter 11',
+        'Chapter 12',
+        'Chapter 13',
+        'Chapter 14',
+        'Chapter 15',
+        'Chapter 16',
+        'Chapter 17',
+        'Chapter 18',
+        'Chapter 19',
+        'Chapter 20',
+        'Chapter 21',
+        'Chapter 22',
+        'Chapter 23',
+        'Chapter 24',
+        'Chapter 25',
+        'Chapter 26',
+        'Chapter 27',
+        'Chapter 28',
+        'Chapter 29',
+        'Chapter 30',
+        'Chapter 31',
+        'Chapter 32',
+        'Chapter 33',
+        'Chapter 34',
+        'Chapter 35',
+        'Chapter 36',
+        'Chapter 37',
+        'Chapter 38',
+        'Chapter 39',
+        'Chapter 40',
+        'Chapter 41',
+        'Chapter 42',
+        'Chapter 43',
+        'Chapter 44',
+        'Chapter 45',
+        'Chapter 46',
+        'Chapter 47',
+        'Chapter 48',
+        'Chapter 49',
+        'Chapter 50',
+      ],
+      chaptercataogry: 'b28')
+];
