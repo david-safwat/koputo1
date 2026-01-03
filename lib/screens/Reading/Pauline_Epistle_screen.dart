@@ -16,7 +16,7 @@ class PaulineEpistleScreen extends StatefulWidget {
 
 void seclectCatholicEpistle(BuildContext context) {
   Navigator.of(context)
-      .pushNamed(CatholicEpistleScreen.CatholicEpistleScreenroute);
+      .pushNamed(CatholicEpistleScreen.catholicEpistleScreenroute);
 }
 
 class _ReadingScreenState extends State<PaulineEpistleScreen> {
@@ -536,6 +536,7 @@ class _ReadingScreenState extends State<PaulineEpistleScreen> {
           });
         },
         label: CustomRubyText(
-            text: text, style: const TextStyle(fontSize: 20, color: Colors.blue)));
+            text: text,
+            style: const TextStyle(fontSize: 20, color: Colors.blue)));
   }
 }

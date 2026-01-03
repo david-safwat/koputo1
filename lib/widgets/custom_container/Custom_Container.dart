@@ -1,5 +1,3 @@
-// ignore_for_file: non_constant_identifier_names, use_build_context_synchronously
-
 import 'package:flutter/material.dart';
 import 'package:koputo1/widgets/custom_ruby_text.dart';
 import 'package:flutter/services.dart';
@@ -7,20 +5,20 @@ import 'package:flutter/services.dart';
 class CustomContainer extends StatefulWidget {
   const CustomContainer(
       {super.key,
-      required this.JapaneseText,
-      required this.EnglishText,
-      required this.CopticText,
-      required this.ArabicText,
+      required this.japaneseText,
+      required this.englishText,
+      required this.copticText,
+      required this.arabicText,
       required this.color,
       required this.isCheckedJp,
       required this.isCheckedEn,
       required this.isCheckedCo,
       required this.isCheckedAr,
       required this.fontsize});
-  final String JapaneseText;
-  final String EnglishText;
-  final String CopticText;
-  final String ArabicText;
+  final String japaneseText;
+  final String englishText;
+  final String copticText;
+  final String arabicText;
   final Color color;
   final bool isCheckedJp;
   final bool isCheckedEn;
@@ -39,7 +37,7 @@ class _CustomContainerState extends State<CustomContainer> {
   @override
   void initState() {
     super.initState();
-    _controller = TextEditingController(text: widget.EnglishText);
+    _controller = TextEditingController(text: widget.englishText);
     _foucsNode = FocusNode();
   }
 
@@ -63,7 +61,7 @@ class _CustomContainerState extends State<CustomContainer> {
 
   void _copyText() async {
     _highlightAllText();
-    await Clipboard.setData(ClipboardData(text: widget.EnglishText));
+    await Clipboard.setData(ClipboardData(text: widget.englishText));
     ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
       content: Text(
         'Copied',
@@ -80,13 +78,13 @@ class _CustomContainerState extends State<CustomContainer> {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          if (widget.JapaneseText.isNotEmpty && (widget.isCheckedJp))
+          if (widget.japaneseText.isNotEmpty && (widget.isCheckedJp))
             Flexible(
               flex: 200,
               child: Align(
                 alignment: Alignment.centerLeft,
                 child: CustomRubyText(
-                  text: widget.JapaneseText,
+                  text: widget.japaneseText,
                   style: TextStyle(
                     color: widget.color,
                     fontSize: widget.fontsize,
@@ -95,7 +93,7 @@ class _CustomContainerState extends State<CustomContainer> {
               ),
             ),
           const Spacer(),
-          if (widget.EnglishText.isNotEmpty && (widget.isCheckedEn))
+          if (widget.englishText.isNotEmpty && (widget.isCheckedEn))
             Flexible(
               flex: 200,
               child: Align(
@@ -120,14 +118,14 @@ class _CustomContainerState extends State<CustomContainer> {
               ),
             ),
           const Spacer(),
-          if (widget.CopticText.isNotEmpty && (widget.isCheckedCo))
+          if (widget.copticText.isNotEmpty && (widget.isCheckedCo))
             Flexible(
               flex: 200,
               child: Align(
                 alignment: Alignment.centerRight,
                 child: GestureDetector(
                   onLongPress: () {
-                    Clipboard.setData(ClipboardData(text: widget.CopticText));
+                    Clipboard.setData(ClipboardData(text: widget.copticText));
                     ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
                         content: Text(
                       'Copied',
@@ -140,18 +138,18 @@ class _CustomContainerState extends State<CustomContainer> {
                         color: widget.color,
                         fontSize: widget.fontsize,
                       ),
-                      widget.CopticText),
+                      widget.copticText),
                 ),
               ),
             ),
-          if (widget.ArabicText.isNotEmpty && (widget.isCheckedAr))
+          if (widget.arabicText.isNotEmpty && (widget.isCheckedAr))
             Flexible(
               flex: 200,
               child: Align(
                 alignment: Alignment.centerRight,
                 child: GestureDetector(
                   onLongPress: () {
-                    Clipboard.setData(ClipboardData(text: widget.ArabicText));
+                    Clipboard.setData(ClipboardData(text: widget.arabicText));
                     ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
                         content: Text(
                       'Copid',
@@ -164,7 +162,7 @@ class _CustomContainerState extends State<CustomContainer> {
                         color: widget.color,
                         fontSize: widget.fontsize,
                       ),
-                      widget.ArabicText),
+                      widget.arabicText),
                 ),
               ),
             ),

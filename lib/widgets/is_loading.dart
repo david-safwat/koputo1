@@ -6,7 +6,7 @@ class IsLoading extends StatelessWidget {
   final String title;
   @override
   Widget build(BuildContext context) {
-    final IsPortrait =
+    final isPortrait =
         MediaQuery.of(context).orientation == Orientation.portrait;
 
     return Scaffold(
@@ -19,8 +19,8 @@ class IsLoading extends StatelessWidget {
             children: [
               const CircularProgressIndicator(),
               SizedBox(
-                height: IsPortrait ? 300 : 150,
-                width: IsPortrait ? 300 : 150,
+                height: isPortrait ? 300 : 150,
+                width: isPortrait ? 300 : 150,
                 child: Image.asset('images/background.png', fit: BoxFit.fill),
               ),
               Center(

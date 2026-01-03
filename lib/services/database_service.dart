@@ -33,7 +33,8 @@
 //   }
 
 //   static Future<void> _seedDataIfNeeded() async {
-//     final box = Hive.box<FirstHour>(boxName);
+//     final box = Hive.box<
+// FirstHour>(boxName);
     
 //     if (box.isEmpty) {
 //       print('Seeding FirstHour data...');

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:koputo1/models/liturgy%20script/LiturgyoftheWord.dart';
-import 'package:koputo1/widgets/Reading_page.dart';
+import 'package:koputo1/models/liturgy%20script/liturgyoftheWord.dart';
+import 'package:koputo1/widgets/reading_page.dart';
 import 'package:koputo1/widgets/change_font_size.dart';
 import 'package:koputo1/widgets/change_language.dart';
 import 'package:provider/provider.dart';
@@ -23,7 +23,7 @@ class _Page12State extends State<Page12> with AutomaticKeepAliveClientMixin {
     final font = context.read<ChangeFontSizeSetting>();
     final selector = context.read<Liturgyoftheword>();
     return ReadingPage(
-        reading: selector.GospelRespnsecript1,
+        reading: selector.gospelRespnsecript1,
         fontsize: font.fontSize,
         isCheckedJp: language.isCheckedJp!,
         isCheckedEn: language.isCheckedEn!,

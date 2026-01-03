@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:koputo1/models/Agpya/first_hour.dart';
-import 'package:koputo1/widgets/Reading_page.dart';
+import 'package:koputo1/widgets/reading_page.dart';
 import 'package:koputo1/widgets/change_font_size.dart';
 import 'package:koputo1/widgets/change_language.dart';
 import 'package:provider/provider.dart';
@@ -24,7 +24,7 @@ class _Page29State extends State<Page29> with AutomaticKeepAliveClientMixin {
     final selector = context.read<FirstHour>();
 
     return ReadingPage(
-        reading: selector.TheGloria1,
+        reading: selector.theGloria1,
         fontsize: font.fontSize,
         isCheckedJp: language.isCheckedJp!,
         isCheckedEn: language.isCheckedEn!,

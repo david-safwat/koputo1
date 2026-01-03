@@ -9,7 +9,7 @@ import 'package:koputo1/widgets/custom_container/custom_container_4.dart';
 
 class CatholicEpistleScreen extends StatefulWidget {
   const CatholicEpistleScreen({super.key});
-  static const CatholicEpistleScreenroute = '/CatholicEpistleScreen';
+  static const catholicEpistleScreenroute = '/CatholicEpistleScreen';
 
   @override
   State<CatholicEpistleScreen> createState() => _ReadingScreenState();
@@ -554,7 +554,8 @@ class _ReadingScreenState extends State<CatholicEpistleScreen> {
           });
         },
         label: CustomRubyText(
-            text: text, style: const TextStyle(fontSize: 20, color: Colors.blue)));
+            text: text,
+            style: const TextStyle(fontSize: 20, color: Colors.blue)));
   }
 }
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:koputo1/screens/Reading/Psalm_Gosapel_screen.dart';
-import 'package:koputo1/screens/Reading/PsalmandGospel_screen.dart';
+import 'package:koputo1/screens/Reading/psalm_Gosapel_screen.dart';
+import 'package:koputo1/screens/Reading/psalmandGospel_screen.dart';
 import 'package:koputo1/widgets/custom_ruby_text.dart';
 
 class SynaxarionScreen extends StatefulWidget {
@@ -56,8 +56,8 @@ class _ReadingScreenState extends State<SynaxarionScreen> {
   }
 
   OrientationBuilder customcontainer3(
-      String JapaneseText, String EnglishText, String ArabicText) {
-    return OrientationBuilder(builder: (context, Orientation) {
+      String japaneseText, String englishText, String arabicText) {
+    return OrientationBuilder(builder: (context, orientation) {
       //get screen width
       double screenwidth = MediaQuery.of(context).size.width;
 
@@ -74,7 +74,7 @@ class _ReadingScreenState extends State<SynaxarionScreen> {
             SizedBox(
               width: containerwidth,
               child: CustomRubyText(
-                  text: JapaneseText,
+                  text: japaneseText,
                   style:
                       const TextStyle(fontSize: 20, color: Colors.redAccent)),
             ),
@@ -84,7 +84,7 @@ class _ReadingScreenState extends State<SynaxarionScreen> {
                 child: Text(
                     style:
                         const TextStyle(fontSize: 20, color: Colors.redAccent),
-                    EnglishText)),
+                    englishText)),
             const Spacer(),
             SizedBox(
                 width: containerwidth,
@@ -92,7 +92,7 @@ class _ReadingScreenState extends State<SynaxarionScreen> {
                     textDirection: TextDirection.rtl,
                     style:
                         const TextStyle(fontSize: 20, color: Colors.redAccent),
-                    ArabicText)),
+                    arabicText)),
           ],
         ),
       );
@@ -100,8 +100,8 @@ class _ReadingScreenState extends State<SynaxarionScreen> {
   }
 
   OrientationBuilder customcontainer2(
-      String JapaneseText, String EnglishText, String ArabicText) {
-    return OrientationBuilder(builder: (context, Orientation) {
+      String japaneseText, String englishText, String arabicText) {
+    return OrientationBuilder(builder: (context, orientation) {
       //get screen width
       double screenwidth = MediaQuery.of(context).size.width;
 
@@ -121,14 +121,14 @@ class _ReadingScreenState extends State<SynaxarionScreen> {
               SizedBox(
                 width: containerwidth,
                 child: CustomRubyText(
-                    text: JapaneseText,
+                    text: japaneseText,
                     style: const TextStyle(fontSize: 20, color: Colors.blue)),
               ),
               const Spacer(),
               SizedBox(
                   width: containerwidth,
                   child: Text(
-                    EnglishText,
+                    englishText,
                     style: const TextStyle(fontSize: 20, color: Colors.blue),
                   )),
               const Spacer(),
@@ -136,7 +136,7 @@ class _ReadingScreenState extends State<SynaxarionScreen> {
                   width: containerwidth,
                   child: Text(
                       textDirection: TextDirection.rtl,
-                      ArabicText,
+                      arabicText,
                       style:
                           const TextStyle(fontSize: 20, color: Colors.blue))),
             ],
@@ -145,8 +145,8 @@ class _ReadingScreenState extends State<SynaxarionScreen> {
   }
 
   OrientationBuilder customcontainer(
-      String JapaneseText, String EnglishText, String ArabicText) {
-    return OrientationBuilder(builder: (context, Orientation) {
+      String japaneseText, String englishText, String arabicText) {
+    return OrientationBuilder(builder: (context, orientation) {
       //get screen width
       double screenwidth = MediaQuery.of(context).size.width;
 
@@ -163,12 +163,12 @@ class _ReadingScreenState extends State<SynaxarionScreen> {
             SizedBox(
               width: containerwidth,
               child: CustomRubyText(
-                  text: JapaneseText, style: const TextStyle(fontSize: 20)),
+                  text: japaneseText, style: const TextStyle(fontSize: 20)),
             ),
             const Spacer(),
             SizedBox(
                 width: containerwidth,
-                child: Text(style: const TextStyle(fontSize: 20), EnglishText)),
+                child: Text(style: const TextStyle(fontSize: 20), englishText)),
             const Spacer(),
             SizedBox(
                 width: containerwidth,
@@ -177,16 +177,16 @@ class _ReadingScreenState extends State<SynaxarionScreen> {
                     style: const TextStyle(
                       fontSize: 20,
                     ),
-                    ArabicText)),
+                    arabicText)),
           ],
         ),
       );
     });
   }
 
-  OrientationBuilder customcontainer4(String JapaneseText, String EnglishText,
-      String CopticarabicText, String ArabicText) {
-    return OrientationBuilder(builder: (context, Orientation) {
+  OrientationBuilder customcontainer4(String japaneseText, String englishText,
+      String copticarabicText, String arabicText) {
+    return OrientationBuilder(builder: (context, orientation) {
       //get screen width
       double screenwidth = MediaQuery.of(context).size.width;
 
@@ -203,12 +203,12 @@ class _ReadingScreenState extends State<SynaxarionScreen> {
             SizedBox(
               width: containerwidth,
               child: CustomRubyText(
-                  text: JapaneseText, style: const TextStyle(fontSize: 20)),
+                  text: japaneseText, style: const TextStyle(fontSize: 20)),
             ),
             const Spacer(),
             SizedBox(
                 width: containerwidth,
-                child: Text(style: const TextStyle(fontSize: 20), EnglishText)),
+                child: Text(style: const TextStyle(fontSize: 20), englishText)),
             const Spacer(),
             SizedBox(
                 width: containerwidth,
@@ -217,7 +217,7 @@ class _ReadingScreenState extends State<SynaxarionScreen> {
                     style: const TextStyle(
                       fontSize: 20,
                     ),
-                    CopticarabicText)),
+                    copticarabicText)),
             const Spacer(),
             SizedBox(
                 width: containerwidth,
@@ -226,16 +226,16 @@ class _ReadingScreenState extends State<SynaxarionScreen> {
                     style: const TextStyle(
                       fontSize: 20,
                     ),
-                    ArabicText)),
+                    arabicText)),
           ],
         ),
       );
     });
   }
 
-  OrientationBuilder customcontainer5(String JapaneseText, String EnglishText,
-      String CopticArabicText, String ArabicText) {
-    return OrientationBuilder(builder: (context, Orientation) {
+  OrientationBuilder customcontainer5(String japaneseText, String englishText,
+      String copticArabicText, String arabicText) {
+    return OrientationBuilder(builder: (context, orientation) {
       //get screen width
       double screenwidth = MediaQuery.of(context).size.width;
 
@@ -252,7 +252,7 @@ class _ReadingScreenState extends State<SynaxarionScreen> {
             SizedBox(
               width: containerwidth,
               child: CustomRubyText(
-                  text: JapaneseText,
+                  text: japaneseText,
                   style: const TextStyle(fontSize: 20, color: Colors.blue)),
             ),
             const Spacer(),
@@ -260,7 +260,7 @@ class _ReadingScreenState extends State<SynaxarionScreen> {
                 width: containerwidth,
                 child: Text(
                     style: const TextStyle(fontSize: 20, color: Colors.blue),
-                    EnglishText)),
+                    englishText)),
             const Spacer(),
             SizedBox(
                 width: containerwidth,
@@ -270,14 +270,14 @@ class _ReadingScreenState extends State<SynaxarionScreen> {
                         fontSize: 20,
                         color: Colors.blue,
                         fontFamily: 'fonts/NotoSansCoptic-Regular.ttf'),
-                    CopticArabicText)),
+                    copticArabicText)),
             const Spacer(),
             SizedBox(
                 width: containerwidth,
                 child: Text(
                     textDirection: TextDirection.rtl,
                     style: const TextStyle(fontSize: 20, color: Colors.blue),
-                    ArabicText)),
+                    arabicText)),
           ],
         ),
       );

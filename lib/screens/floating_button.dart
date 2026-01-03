@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class floatingactionbutton extends StatelessWidget {
-  const floatingactionbutton({
+class Floatingactionbutton extends StatelessWidget {
+  const Floatingactionbutton({
     super.key,
   });
 
@@ -47,10 +47,10 @@ class floatingactionbutton extends StatelessWidget {
                         child: const Text('クローズ')),
                     TextButton(
                         onPressed: () async {
-                          final Uri HomePageUrl =
+                          final Uri homePageUrl =
                               Uri.parse('https://www.japancopticchurch.com/');
-                          if (!await launchUrl(HomePageUrl)) {
-                            throw 'could not launch $HomePageUrl';
+                          if (!await launchUrl(homePageUrl)) {
+                            throw 'could not launch $homePageUrl';
                           }
                         },
                         child: const Text('もっと見る'))

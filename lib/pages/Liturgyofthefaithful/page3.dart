@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:koputo1/models/liturgy%20script/LiturgyoftheFaithful.dart';
-import 'package:koputo1/widgets/Reading_page.dart';
+import 'package:koputo1/models/liturgy%20script/liturgyoftheFaithful.dart';
+import 'package:koputo1/widgets/reading_page.dart';
 import 'package:koputo1/widgets/change_font_size.dart';
 import 'package:koputo1/widgets/change_language.dart';
 import 'package:provider/provider.dart';
@@ -23,7 +23,7 @@ class _Page3State extends State<Page3> with AutomaticKeepAliveClientMixin {
     final font = context.read<ChangeFontSizeSetting>();
     final selector = context.read<Liturgyofthefaithful>();
     return ReadingPage(
-        reading: selector.TheInstitutionNarrativescript1,
+        reading: selector.theInstitutionNarrativescript1,
         fontsize: font.fontSize,
         isCheckedJp: language.isCheckedJp!,
         isCheckedEn: language.isCheckedEn!,

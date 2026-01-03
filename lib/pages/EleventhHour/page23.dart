@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:koputo1/models/Agpya/Eleventh_hour.dart';
-import 'package:koputo1/widgets/Reading_page.dart';
+import 'package:koputo1/models/Agpya/eleventh_hour.dart';
+import 'package:koputo1/widgets/reading_page.dart';
 import 'package:koputo1/widgets/change_font_size.dart';
 import 'package:koputo1/widgets/change_language.dart';
 import 'package:provider/provider.dart';
@@ -24,7 +24,7 @@ class _Page23State extends State<Page23> with AutomaticKeepAliveClientMixin {
     final selector = context.read<EleventhHour>();
 
     return ReadingPage(
-        reading: selector.ConclusionofEverHour1,
+        reading: selector.conclusionofEverHour1,
         fontsize: font.fontSize,
         isCheckedJp: language.isCheckedJp!,
         isCheckedEn: language.isCheckedEn!,

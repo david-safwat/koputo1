@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:koputo1/main.dart';
 import 'package:koputo1/screens/Agpya/Agpya_screen.dart';
 import 'package:koputo1/screens/Liturgy/liturgy_screen.dart';
-import 'package:koputo1/screens/Reading/Reading_screen.dart';
+import 'package:koputo1/screens/Reading/reading_screen.dart';
 import 'package:koputo1/screens/bible_screen.dart';
 import 'package:koputo1/screens/sidebar.dart';
 import 'package:koputo1/widgets/is_loading.dart';
@@ -35,7 +35,7 @@ class _TabScreenState extends State<TabScreen> {
               title: 'しばらくお待ちください。\n Loading',
             )
           : Scaffold(
-              drawer: const sidebar(),
+              drawer: const Sidebar(),
               appBar: AppBar(
                   automaticallyImplyLeading: false,
                   bottom: const PreferredSize(

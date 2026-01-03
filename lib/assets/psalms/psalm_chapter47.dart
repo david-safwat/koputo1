@@ -13,7 +13,7 @@ class PsalmChapter47 extends StatelessWidget {
         title: const Text('聖体礼儀'),
         centerTitle: true,
       ),
-      drawer: const sidebar(),
+      drawer: const Sidebar(),
       body: Column(children: [
         const SizedBox(
           height: 5,

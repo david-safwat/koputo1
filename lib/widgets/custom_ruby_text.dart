@@ -13,13 +13,13 @@ class CustomRubyText extends StatelessWidget {
     final matches = rubyRegExp.allMatches(text);
     List<InlineSpan> spans = [];
     int lastmatchend = 0;
-    for (final Match in matches) {
-      if (Match.start > lastmatchend) {
+    for (final match in matches) {
+      if (match.start > lastmatchend) {
         spans.add(TextSpan(
-            text: text.substring(lastmatchend, Match.start), style: style));
+            text: text.substring(lastmatchend, match.start), style: style));
       }
-      final kanji = Match.group(1);
-      final furigana = Match.group(2);
+      final kanji = match.group(1);
+      final furigana = match.group(2);
 
       spans.add(WidgetSpan(
           alignment: PlaceholderAlignment.middle,
@@ -33,7 +33,7 @@ class CustomRubyText extends StatelessWidget {
               Text(kanji!, style: style)
             ],
           )));
-      lastmatchend = Match.end;
+      lastmatchend = match.end;
     }
 
     if (lastmatchend < text.length) {

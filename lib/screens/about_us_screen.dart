@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:koputo1/models/liturgy%20script/LiturgyoftheWord.dart';
-import 'package:koputo1/screens/Reading/Reading_screen.dart';
+import 'package:koputo1/models/liturgy%20script/liturgyoftheWord.dart';
+import 'package:koputo1/screens/Reading/reading_screen.dart';
 import 'package:koputo1/widgets/custom_container/Custom_Container.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:provider/provider.dart';
@@ -220,7 +220,7 @@ class _AboutUsScreenState extends State<AboutUsScreen> {
             ];
           },
           body: Consumer<Liturgyoftheword>(
-            builder: (BuildContext context, Liturgyoftheword, Widget? child) =>
+            builder: (BuildContext context, liturgyoftheword, Widget? child) =>
                 PageView(
                     controller: _pageController,
                     onPageChanged: (index) {
@@ -233,19 +233,19 @@ class _AboutUsScreenState extends State<AboutUsScreen> {
                   SingleChildScrollView(
                     child: Column(
                       children: List.generate(
-                        Liturgyoftheword.HymnoftheCenserscript1.length,
+                        liturgyoftheword.hymnoftheCenserscript1.length,
                         (index) {
                           return CustomContainer(
-                            JapaneseText: Liturgyoftheword
-                                .HymnoftheCenserscript1[index].JapaneseText,
-                            EnglishText: Liturgyoftheword
-                                .HymnoftheCenserscript1[index].EnglishText,
-                            CopticText: Liturgyoftheword
-                                .HymnoftheCenserscript1[index].Coptictext,
-                            ArabicText: Liturgyoftheword
-                                .HymnoftheCenserscript1[index].ArabicText,
-                            color: Liturgyoftheword
-                                .HymnoftheCenserscript1[index].textcolor,
+                            japaneseText: liturgyoftheword
+                                .hymnoftheCenserscript1[index].japaneseText,
+                            englishText: liturgyoftheword
+                                .hymnoftheCenserscript1[index].englishText,
+                            copticText: liturgyoftheword
+                                .hymnoftheCenserscript1[index].coptictext,
+                            arabicText: liturgyoftheword
+                                .hymnoftheCenserscript1[index].arabicText,
+                            color: liturgyoftheword
+                                .hymnoftheCenserscript1[index].textcolor,
                             isCheckedJp: isCheckedJp!,
                             isCheckedEn: isCheckedEn!,
                             isCheckedCo: isCheckedCo!,
@@ -260,21 +260,21 @@ class _AboutUsScreenState extends State<AboutUsScreen> {
                     primary: true,
                     child: Column(
                       children: List.generate(
-                        Liturgyoftheword.HymnoftheIntercessionscript1.length,
+                        liturgyoftheword.hymnoftheIntercessionscript1.length,
                         (index) {
                           return CustomContainer(
-                            JapaneseText: Liturgyoftheword
-                                .HymnoftheIntercessionscript1[index]
-                                .JapaneseText,
-                            EnglishText: Liturgyoftheword
-                                .HymnoftheIntercessionscript1[index]
-                                .EnglishText,
-                            CopticText: Liturgyoftheword
-                                .HymnoftheIntercessionscript1[index].Coptictext,
-                            ArabicText: Liturgyoftheword
-                                .HymnoftheIntercessionscript1[index].ArabicText,
-                            color: Liturgyoftheword
-                                .HymnoftheIntercessionscript1[index].textcolor,
+                            japaneseText: liturgyoftheword
+                                .hymnoftheIntercessionscript1[index]
+                                .japaneseText,
+                            englishText: liturgyoftheword
+                                .hymnoftheIntercessionscript1[index]
+                                .englishText,
+                            copticText: liturgyoftheword
+                                .hymnoftheIntercessionscript1[index].coptictext,
+                            arabicText: liturgyoftheword
+                                .hymnoftheIntercessionscript1[index].arabicText,
+                            color: liturgyoftheword
+                                .hymnoftheIntercessionscript1[index].textcolor,
                             isCheckedJp: isCheckedJp!,
                             isCheckedEn: isCheckedEn!,
                             isCheckedCo: isCheckedCo!,
@@ -307,4 +307,3 @@ class _AboutUsScreenState extends State<AboutUsScreen> {
 //           });
 //         },
 //         label: customcontainer3(japanesetext, Englishtext, Arabictext));
-

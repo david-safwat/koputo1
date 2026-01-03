@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:koputo1/widgets/custom_ruby_text.dart';
 
-OrientationBuilder customcontainer5(String JapaneseText, String EnglishText,
-    String CopticArabicText, String ArabicText) {
-  return OrientationBuilder(builder: (context, Orientation) {
+OrientationBuilder customcontainer5(String japaneseText, String englishText,
+    String copticArabicText, String arabicText) {
+  return OrientationBuilder(builder: (context, orientation) {
     //get screen width
     double screenwidth = MediaQuery.of(context).size.width;
 
@@ -19,7 +19,7 @@ OrientationBuilder customcontainer5(String JapaneseText, String EnglishText,
           SizedBox(
             width: containerwidth,
             child: CustomRubyText(
-                text: JapaneseText,
+                text: japaneseText,
                 style: const TextStyle(fontSize: 20, color: Colors.blue)),
           ),
           const Spacer(),
@@ -27,7 +27,7 @@ OrientationBuilder customcontainer5(String JapaneseText, String EnglishText,
               width: containerwidth,
               child: Text(
                   style: const TextStyle(fontSize: 20, color: Colors.blue),
-                  EnglishText)),
+                  englishText)),
           const Spacer(),
           SizedBox(
               width: containerwidth,
@@ -37,14 +37,14 @@ OrientationBuilder customcontainer5(String JapaneseText, String EnglishText,
                       fontSize: 20,
                       color: Colors.blue,
                       fontFamily: 'fonts/NotoSansCoptic-Regular.ttf'),
-                  CopticArabicText)),
+                  copticArabicText)),
           const Spacer(),
           SizedBox(
               width: containerwidth,
               child: Text(
                   textDirection: TextDirection.rtl,
                   style: const TextStyle(fontSize: 20, color: Colors.blue),
-                  ArabicText)),
+                  arabicText)),
         ],
       ),
     );

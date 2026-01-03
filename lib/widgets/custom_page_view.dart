@@ -10,10 +10,10 @@ class CustomPageView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return NotificationListener<ScrollNotification>(
-      onNotification: (ScrollNotification Notification) {
-        if (Notification is ScrollStartNotification) {}
-        (Notification is ScrollUpdateNotification);
-        (Notification is ScrollEndNotification);
+      onNotification: (ScrollNotification notification) {
+        if (notification is ScrollStartNotification) {}
+        (notification is ScrollUpdateNotification);
+        (notification is ScrollEndNotification);
         {
           return true;
         }

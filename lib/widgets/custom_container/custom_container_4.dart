@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:koputo1/widgets/custom_ruby_text.dart';
 
-OrientationBuilder customcontainer4(String JapaneseText, String EnglishText,
-    String CopticarabicText, String ArabicText) {
-  return OrientationBuilder(builder: (context, Orientation) {
+OrientationBuilder customcontainer4(String japaneseText, String englishText,
+    String copticarabicText, String arabicText) {
+  return OrientationBuilder(builder: (context, orientation) {
     //get screen width
     double screenwidth = MediaQuery.of(context).size.width;
 
@@ -22,13 +22,13 @@ OrientationBuilder customcontainer4(String JapaneseText, String EnglishText,
             //   decoration: BoxDecoration(border: Border(right: BorderSide())),
             width: containerwidth,
             child: CustomRubyText(
-                text: JapaneseText, style: const TextStyle(fontSize: 20)),
+                text: japaneseText, style: const TextStyle(fontSize: 20)),
           ),
           const Spacer(),
           SizedBox(
               //       decoration: BoxDecoration(border: Border(right: BorderSide())),
               width: containerwidth,
-              child: Text(style: const TextStyle(fontSize: 20), EnglishText)),
+              child: Text(style: const TextStyle(fontSize: 20), englishText)),
           const Spacer(),
           SizedBox(
               //      decoration: BoxDecoration(border: Border(right: BorderSide())),
@@ -38,7 +38,7 @@ OrientationBuilder customcontainer4(String JapaneseText, String EnglishText,
                   style: const TextStyle(
                     fontSize: 20,
                   ),
-                  CopticarabicText)),
+                  copticarabicText)),
           const Spacer(),
           SizedBox(
               width: containerwidth,
@@ -47,7 +47,7 @@ OrientationBuilder customcontainer4(String JapaneseText, String EnglishText,
                   style: const TextStyle(
                     fontSize: 20,
                   ),
-                  ArabicText)),
+                  arabicText)),
         ],
       ),
     );

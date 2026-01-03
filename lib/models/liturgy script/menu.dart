@@ -1,214 +1,214 @@
 import 'package:flutter/material.dart';
 
-class menu extends ChangeNotifier {
-  final String JapaneseTitle;
-  final String EnglishTitle;
-  final String CopticTitle;
-  final String ArabicTitle;
+class Menu extends ChangeNotifier {
+  final String japaneseTitle;
+  final String englishTitle;
+  final String copticTitle;
+  final String arabicTitle;
   final int index;
 
-  menu({
-    required this.CopticTitle,
-    required this.JapaneseTitle,
-    required this.EnglishTitle,
-    required this.ArabicTitle,
+  Menu({
+    required this.copticTitle,
+    required this.japaneseTitle,
+    required this.englishTitle,
+    required this.arabicTitle,
     required this.index,
   });
 
-  List<menu> get OfferingOfTheLambMenu1 => OfferingOfTheLambMenu;
-  List<menu> get LiturgyofthewordMenu1 => LiturgyofthewordMenu;
-  List<menu> get LiturgyoftheFaithfulMenu1 => LiturgyoftheFaithfulMenu;
-  List<menu> get DistributionMenu1 => DistributionMenu;
+  List<Menu> get offeringOfTheLambMenu1 => offeringOfTheLambMenu;
+  List<Menu> get liturgyofthewordMenu1 => liturgyofthewordMenu;
+  List<Menu> get liturgyoftheFaithfulMenu1 => liturgyoftheFaithfulMenu;
+  List<Menu> get distributionMenu1 => distributionMenu;
 
-  static List<menu> OfferingOfTheLambMenu = [
-    menu(
-      JapaneseTitle: '奉奉納(ほうのう)の( )儀(ぎ)',
-      EnglishTitle: 'Offering of the Lamb',
-      ArabicTitle: 'تقديم الحمل',
+  static List<Menu> offeringOfTheLambMenu = [
+    Menu(
+      japaneseTitle: '奉奉納(ほうのう)の( )儀(ぎ)',
+      englishTitle: 'Offering of the Lamb',
+      arabicTitle: 'تقديم الحمل',
       index: 0,
-      CopticTitle: '',
+      copticTitle: '',
     ),
-    menu(
-      JapaneseTitle: '感謝(かんしゃ)の祈り(いの)',
-      EnglishTitle: 'Thanksgiving Prayer',
-      ArabicTitle: 'صلاة الشكر',
+    Menu(
+      japaneseTitle: '感謝(かんしゃ)の祈り(いの)',
+      englishTitle: 'Thanksgiving Prayer',
+      arabicTitle: 'صلاة الشكر',
       index: 1,
-      CopticTitle: '',
+      copticTitle: '',
     ),
-    menu(
-      JapaneseTitle: '聖職者(せいしょくしゃ)の( )罪(つみ)の赦し(ゆる)',
-      EnglishTitle: 'Absolution of the Servants',
-      ArabicTitle: 'تحليل الخدام',
+    Menu(
+      japaneseTitle: '聖職者(せいしょくしゃ)の( )罪(つみ)の赦し(ゆる)',
+      englishTitle: 'Absolution of the Servants',
+      arabicTitle: 'تحليل الخدام',
       index: 2,
-      CopticTitle: '',
+      copticTitle: '',
     ),
   ];
 
-  static List<menu> LiturgyofthewordMenu = [
-    menu(
-      JapaneseTitle: '執(と)り( )成(な)しの( )賛(歌(さんか)(香炉(こうろ)の( )賛歌(さんか))( )',
-      EnglishTitle: 'Hymn of the Censer',
-      ArabicTitle: 'لحن هذه المجمرة الذهب: تاي شوري (طاي شوري)',
+  static List<Menu> liturgyofthewordMenu = [
+    Menu(
+      japaneseTitle: '執(と)り( )成(な)しの( )賛(歌(さんか)(香炉(こうろ)の( )賛歌(さんか))( )',
+      englishTitle: 'Hymn of the Censer',
+      arabicTitle: 'لحن هذه المجمرة الذهب: تاي شوري (طاي شوري)',
       index: 0,
-      CopticTitle: '',
+      copticTitle: '',
     ),
-    menu(
-      JapaneseTitle: '',
-      EnglishTitle: 'Hymn of the Intercession',
-      ArabicTitle: 'أرباع شفاعات القديسين / الهيتنيات',
+    Menu(
+      japaneseTitle: '',
+      englishTitle: 'Hymn of the Intercession',
+      arabicTitle: 'أرباع شفاعات القديسين / الهيتنيات',
       index: 1,
-      CopticTitle: '',
+      copticTitle: '',
     ),
-    menu(
-      JapaneseTitle: '聖(せい)パウロの( )書簡(しょかん)',
-      EnglishTitle: 'Pauline Epistle',
-      ArabicTitle: 'البولس',
+    Menu(
+      japaneseTitle: '聖(せい)パウロの( )書簡(しょかん)',
+      englishTitle: 'Pauline Epistle',
+      arabicTitle: 'البولس',
       index: 2,
-      CopticTitle: '',
+      copticTitle: '',
     ),
-    menu(
-      JapaneseTitle: '４( )人(にん)の( )使徒(しと)の( )手紙(てがみ)（( )公同書簡)(こうどうしょかん)',
-      EnglishTitle: 'Catholic Epistle',
-      ArabicTitle: 'الكاثوليكون',
+    Menu(
+      japaneseTitle: '４( )人(にん)の( )使徒(しと)の( )手紙(てがみ)（( )公同書簡)(こうどうしょかん)',
+      englishTitle: 'Catholic Epistle',
+      arabicTitle: 'الكاثوليكون',
       index: 3,
-      CopticTitle: '',
+      copticTitle: '',
     ),
-    menu(
-      JapaneseTitle: '使徒行録(しとぎょうろく)の応答(おうとう)',
-      EnglishTitle: 'PraxisRespones',
-      ArabicTitle: ' مرد الابركسيس ',
+    Menu(
+      japaneseTitle: '使徒行録(しとぎょうろく)の応答(おうとう)',
+      englishTitle: 'PraxisRespones',
+      arabicTitle: ' مرد الابركسيس ',
       index: 4,
-      CopticTitle: '',
+      copticTitle: '',
     ),
-    menu(
-      JapaneseTitle: '使徒行録(しとぎょうろく)',
-      EnglishTitle: 'Praxis',
-      ArabicTitle: 'الابركسيس',
+    Menu(
+      japaneseTitle: '使徒行録(しとぎょうろく)',
+      englishTitle: 'Praxis',
+      arabicTitle: 'الابركسيس',
       index: 5,
-      CopticTitle: '',
+      copticTitle: '',
     ),
-    menu(
-      JapaneseTitle: 'シナクサーリアム ( )聖者(せいじゃ)カレンダー( )',
-      EnglishTitle: 'Synaxarion',
-      ArabicTitle: 'السكنسار',
+    Menu(
+      japaneseTitle: 'シナクサーリアム ( )聖者(せいじゃ)カレンダー( )',
+      englishTitle: 'Synaxarion',
+      arabicTitle: 'السكنسار',
       index: 6,
-      CopticTitle: '',
+      copticTitle: '',
     ),
-    menu(
-      JapaneseTitle: '聖三(せいさん)祝(しゅく)文(ぶん)の( )賛歌(さんか)アギオス( )',
-      EnglishTitle: 'Trisagion',
-      ArabicTitle: 'الثلاث تقديسات',
+    Menu(
+      japaneseTitle: '聖三(せいさん)祝(しゅく)文(ぶん)の( )賛歌(さんか)アギオス( )',
+      englishTitle: 'Trisagion',
+      arabicTitle: 'الثلاث تقديسات',
       index: 7,
-      CopticTitle: '',
+      copticTitle: '',
     ),
-    menu(
-      JapaneseTitle: '福音書(ふくいんしょ)の祈(いの)り( )',
-      EnglishTitle: 'LitanyoftheGospel',
-      ArabicTitle: 'اوشية الانجيل',
+    Menu(
+      japaneseTitle: '福音書(ふくいんしょ)の祈(いの)り( )',
+      englishTitle: 'LitanyoftheGospel',
+      arabicTitle: 'اوشية الانجيل',
       index: 8,
-      CopticTitle: '',
+      copticTitle: '',
     ),
-    menu(
-      JapaneseTitle: '詩編(しへん)',
-      EnglishTitle: 'Psalm Chant',
-      ArabicTitle: 'المزمور',
+    Menu(
+      japaneseTitle: '詩編(しへん)',
+      englishTitle: 'Psalm Chant',
+      arabicTitle: 'المزمور',
       index: 9,
-      CopticTitle: '',
+      copticTitle: '',
     ),
-    menu(
-      JapaneseTitle: '福音書(ふくいんしょ)',
-      EnglishTitle: 'Liturgy Gospel',
-      ArabicTitle: 'الانجيل',
+    Menu(
+      japaneseTitle: '福音書(ふくいんしょ)',
+      englishTitle: 'Liturgy Gospel',
+      arabicTitle: 'الانجيل',
       index: 10,
-      CopticTitle: '',
+      copticTitle: '',
     ),
-    menu(
-      JapaneseTitle: '会衆(かいしゅう)は( )次(つぎ)の( )連祷(れんじゅ)を( )歌(うた)う( )',
-      EnglishTitle: 'Gospel Respnse',
-      ArabicTitle: 'مرد الإنجيل',
+    Menu(
+      japaneseTitle: '会衆(かいしゅう)は( )次(つぎ)の( )連祷(れんじゅ)を( )歌(うた)う( )',
+      englishTitle: 'Gospel Respnse',
+      arabicTitle: 'مرد الإنجيل',
       index: 11,
-      CopticTitle: '',
+      copticTitle: '',
     ),
-    menu(
-      JapaneseTitle: 'オーソドックス( )使徒(しと)信条(しんじょう)',
-      EnglishTitle: 'The Orthdox Creed',
-      ArabicTitle: 'قانون الإيمان المقدس الأرثوذكسي:',
+    Menu(
+      japaneseTitle: 'オーソドックス( )使徒(しと)信条(しんじょう)',
+      englishTitle: 'The Orthdox Creed',
+      arabicTitle: 'قانون الإيمان المقدس الأرثوذكسي:',
       index: 12,
-      CopticTitle: '',
+      copticTitle: '',
     ),
   ];
-  static List<menu> LiturgyoftheFaithfulMenu = [
-    menu(
-      JapaneseTitle: '和解(わかい)の( )祈り(いの)',
-      EnglishTitle: 'Prayer of Reconciliation',
-      ArabicTitle: 'صلاة الصلح',
+  static List<Menu> liturgyoftheFaithfulMenu = [
+    Menu(
+      japaneseTitle: '和解(わかい)の( )祈り(いの)',
+      englishTitle: 'Prayer of Reconciliation',
+      arabicTitle: 'صلاة الصلح',
       index: 0,
-      CopticTitle: '',
+      copticTitle: '',
     ),
-    menu(
-      JapaneseTitle: '奉献(ほうけん)文(ぶん) ( )(アナフォラ)( )',
-      EnglishTitle: 'Anaphora',
-      ArabicTitle: 'الانافورا',
+    Menu(
+      japaneseTitle: '奉献(ほうけん)文(ぶん) ( )(アナフォラ)( )',
+      englishTitle: 'Anaphora',
+      arabicTitle: 'الانافورا',
       index: 1,
-      CopticTitle: '',
+      copticTitle: '',
     ),
-    menu(
-      JapaneseTitle: '奉献式(ほうけんしき)',
-      EnglishTitle: 'The Institution Narrative',
-      ArabicTitle: 'الصلوات التاسيسية',
+    Menu(
+      japaneseTitle: '奉献式(ほうけんしき)',
+      englishTitle: 'The Institution Narrative',
+      arabicTitle: 'الصلوات التاسيسية',
       index: 2,
-      CopticTitle: '',
+      copticTitle: '',
     ),
-    menu(
-      JapaneseTitle: '七つ(なな)の小(ちい)さい( )祈(いの)り( )',
-      EnglishTitle: 'The Seven Short Litanies',
-      ArabicTitle: 'السبع الأواشي الصغار',
+    Menu(
+      japaneseTitle: '七つ(なな)の小(ちい)さい( )祈(いの)り( )',
+      englishTitle: 'The Seven Short Litanies',
+      arabicTitle: 'السبع الأواشي الصغار',
       index: 3,
-      CopticTitle: '',
+      copticTitle: '',
     ),
-    menu(
-      JapaneseTitle: '聖人(せいじん)達(たち)の( )祝賀(しゅくが)',
-      EnglishTitle: 'Commemoration of the Saints',
-      ArabicTitle: 'مجمع القديسين',
+    Menu(
+      japaneseTitle: '聖人(せいじん)達(たち)の( )祝賀(しゅくが)',
+      englishTitle: 'Commemoration of the Saints',
+      arabicTitle: 'مجمع القديسين',
       index: 4,
-      CopticTitle: '',
+      copticTitle: '',
     ),
-    menu(
-      JapaneseTitle: '聖体(せいたい)礼儀(れいぎ)',
-      EnglishTitle: 'Liturgy',
-      ArabicTitle: 'القداس الإلهي',
+    Menu(
+      japaneseTitle: '聖体(せいたい)礼儀(れいぎ)',
+      englishTitle: 'Liturgy',
+      arabicTitle: 'القداس الإلهي',
       index: 5,
-      CopticTitle: '',
+      copticTitle: '',
     ),
-    menu(
-      JapaneseTitle: '通常(つうじょう)奉献(ほうけん)文(ぶん)',
-      EnglishTitle: 'The Prayers of the Fractions',
-      ArabicTitle: 'صلوات القسم',
+    Menu(
+      japaneseTitle: '通常(つうじょう)奉献(ほうけん)文(ぶん)',
+      englishTitle: 'The Prayers of the Fractions',
+      arabicTitle: 'صلوات القسم',
       index: 6,
-      CopticTitle: '',
+      copticTitle: '',
     ),
-    menu(
-      JapaneseTitle: '',
-      EnglishTitle: 'The Confession',
-      ArabicTitle: 'الاعتراف',
+    Menu(
+      japaneseTitle: '',
+      englishTitle: 'The Confession',
+      arabicTitle: 'الاعتراف',
       index: 7,
-      CopticTitle: '',
+      copticTitle: '',
     ),
   ];
-  static List<menu> DistributionMenu = [
-    menu(
-      JapaneseTitle: '配布(はいふ)',
-      EnglishTitle: 'Distribution',
-      ArabicTitle: 'التوزيع',
+  static List<Menu> distributionMenu = [
+    Menu(
+      japaneseTitle: '配布(はいふ)',
+      englishTitle: 'Distribution',
+      arabicTitle: 'التوزيع',
       index: 0,
-      CopticTitle: '',
+      copticTitle: '',
     ),
-    menu(
-      JapaneseTitle: '礼拝(れいはい)賛歌(さんか)の( )結(むす)び( )',
-      EnglishTitle: 'Concluding Hymn',
-      ArabicTitle: 'قانون ختام الصلوات الاجتماعية',
+    Menu(
+      japaneseTitle: '礼拝(れいはい)賛歌(さんか)の( )結(むす)び( )',
+      englishTitle: 'Concluding Hymn',
+      arabicTitle: 'قانون ختام الصلوات الاجتماعية',
       index: 1,
-      CopticTitle: '',
+      copticTitle: '',
     ),
   ];
 }

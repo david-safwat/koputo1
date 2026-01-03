@@ -2,7 +2,7 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:koputo1/models/liturgy%20script/offering_of_the_lamb.dart';
-import 'package:koputo1/widgets/Reading_page.dart';
+import 'package:koputo1/widgets/reading_page.dart';
 import 'package:koputo1/widgets/change_font_size.dart';
 import 'package:koputo1/widgets/change_language.dart';
 import 'package:provider/provider.dart';
@@ -27,7 +27,7 @@ class _Page1State extends State<Page1> with AutomaticKeepAliveClientMixin {
     final selector = context.read<OfferingOfTheLamb>();
 
     return ReadingPage(
-      reading: selector.OfferingOfTheLambscript1,
+      reading: selector.offeringOfTheLambscript1,
       fontsize: font.fontSize,
       isCheckedJp: language.isCheckedJp!,
       isCheckedEn: language.isCheckedEn!,

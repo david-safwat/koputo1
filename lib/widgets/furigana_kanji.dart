@@ -24,8 +24,8 @@ class FuriganaKanji extends StatelessWidget {
   }
 }
 
-class furiganasentence extends StatelessWidget {
-  const furiganasentence({
+class Furiganasentence extends StatelessWidget {
+  const Furiganasentence({
     super.key,
     required this.words,
   });

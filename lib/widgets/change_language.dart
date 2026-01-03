@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class ChangeLanguage extends StatelessWidget {
-  ChangeLanguage({
+  const ChangeLanguage({
     super.key,
     required this.isCheckedJp,
     required this.isCheckedEn,

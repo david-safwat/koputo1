@@ -10,7 +10,7 @@ class GenesisChapters {
 }
 
 //list of Genesischapters
-List<GenesisChapters> Genesis_chapter = [
+List<GenesisChapters> genesischapter = [
   GenesisChapters(id: 1, biblecategory: '創世記', title: 'chapter 1'),
   GenesisChapters(id: 2, biblecategory: '創世記', title: 'chapter 2'),
   GenesisChapters(id: 3, biblecategory: '創世記', title: 'chapter 3'),

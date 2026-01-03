@@ -3,8 +3,8 @@ import 'package:flutter_admin_scaffold/admin_scaffold.dart';
 import 'package:koputo1/screens/Liturgy/liturgy_screen.dart';
 import 'package:koputo1/screens/bibles/matthew/matthew_screen.dart';
 
-class sidebar extends StatelessWidget {
-  const sidebar({
+class Sidebar extends StatelessWidget {
+  const Sidebar({
     super.key,
   });
 
@@ -57,7 +57,7 @@ class sidebar extends StatelessWidget {
               children: [
                 AdminMenuItem(
                     title: 'マタイによる福音書',
-                    route: MatthewScreen.MatthewScreenroute),
+                    route: MatthewScreen.matthewScreenroute),
                 AdminMenuItem(title: 'マルコによる福音書 ', route: '/マルコによる福音書 '),
                 AdminMenuItem(title: 'ルカによる福音書 ', route: '/ルカによる福音書 '),
                 AdminMenuItem(title: 'ヨハネによる福音書 ', route: '/ヨハネによる福音書 '),

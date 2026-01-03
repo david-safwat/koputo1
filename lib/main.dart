@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:koputo1/l10n/app_localizations.dart';
-import 'package:koputo1/models/Agpya/Eleventh_hour.dart';
-import 'package:koputo1/models/Agpya/Twelveth_hour.dart';
+import 'package:koputo1/models/Agpya/eleventh_hour.dart';
+import 'package:koputo1/models/Agpya/twelveth_hour.dart';
 import 'package:koputo1/models/Agpya/agpya_menu.dart';
 import 'package:koputo1/models/Agpya/first_hour.dart';
 import 'package:koputo1/models/Agpya/ninth_hour.dart';
 import 'package:koputo1/models/Agpya/sixtth_hour.dart';
 import 'package:koputo1/models/Agpya/third_hour.dart';
 import 'package:koputo1/models/check_box_language.dart';
-import 'package:koputo1/models/liturgy%20script/LiturgyoftheFaithful.dart';
-import 'package:koputo1/models/liturgy%20script/LiturgyoftheWord.dart';
+import 'package:koputo1/models/liturgy%20script/liturgyoftheFaithful.dart';
+import 'package:koputo1/models/liturgy%20script/liturgyoftheWord.dart';
 import 'package:koputo1/models/liturgy%20script/liturgy_menu.dart';
 import 'package:koputo1/models/liturgy%20script/offering_of_the_lamb.dart';
 import 'package:koputo1/models/psalms_chapters/psalmchapter.dart';
@@ -23,13 +23,13 @@ import 'package:koputo1/screens/Agpya/sixth_hour_screen.dart';
 import 'package:koputo1/screens/Agpya/third_hour_screen.dart';
 import 'package:koputo1/screens/Agpya/twelveth_hour_screen.dart';
 import 'package:koputo1/screens/Liturgy/offering_of_the_Lamb_screen.dart';
-import 'package:koputo1/screens/Reading/Catholic_Epistle_screen.dart';
-import 'package:koputo1/screens/Reading/Pauline_Epistle_screen.dart';
-import 'package:koputo1/screens/Reading/Praxis_screen.dart';
-import 'package:koputo1/screens/Reading/Psalm_Gosapel_screen.dart';
-import 'package:koputo1/screens/Reading/PsalmandGospel_screen.dart';
-import 'package:koputo1/screens/Reading/Reading_screen.dart';
-import 'package:koputo1/screens/Reading/Synaxarion_screen.dart';
+import 'package:koputo1/screens/Reading/catholic_Epistle_screen.dart';
+import 'package:koputo1/screens/Reading/pauline_Epistle_screen.dart';
+import 'package:koputo1/screens/Reading/praxis_screen.dart';
+import 'package:koputo1/screens/Reading/psalm_Gosapel_screen.dart';
+import 'package:koputo1/screens/Reading/psalmandGospel_screen.dart';
+import 'package:koputo1/screens/Reading/reading_screen.dart';
+import 'package:koputo1/screens/Reading/synaxarion_screen.dart';
 import 'package:koputo1/screens/about_us_screen.dart';
 import 'package:koputo1/screens/bible_screen.dart';
 import 'package:koputo1/screens/bibles/matthew/chapaters/chapter1.dart';
@@ -47,7 +47,7 @@ import 'package:koputo1/screens/Liturgy/liturgy_screen.dart';
 import 'package:koputo1/screens/Liturgy/distribution_screen.dart';
 import 'package:koputo1/widgets/pageprovider.dart';
 import 'package:provider/provider.dart';
-import 'package:koputo1/models/liturgy%20script/Distribution.dart';
+import 'package:koputo1/models/liturgy%20script/distribution.dart';
 // import 'package:koputo1/services/database_service.dart';
 
 void main() async {
@@ -83,10 +83,10 @@ class _Koputo1State extends State<Koputo1> {
         providers: [
           ChangeNotifierProvider(
             create: (context) => Liturgyoftheword(
-                JapaneseText: '',
-                EnglishText: '',
-                Coptictext: '',
-                ArabicText: '',
+                japaneseText: '',
+                englishText: '',
+                coptictext: '',
+                arabicText: '',
                 textcolor: Colors.black),
           ),
           ChangeNotifierProvider(
@@ -94,18 +94,18 @@ class _Koputo1State extends State<Koputo1> {
           ),
           ChangeNotifierProvider(
             create: (context) => OfferingOfTheLamb(
-                JapaneseText: '',
-                EnglishText: '',
-                Coptictext: '',
-                ArabicText: '',
+                japaneseText: '',
+                englishText: '',
+                coptictext: '',
+                arabicText: '',
                 textcolor: Colors.black),
           ),
           ChangeNotifierProvider(
             create: (context) => Psalmchapter(
-                JapaneseText: '',
-                EnglishText: '',
-                Coptictext: '',
-                ArabicText: '',
+                japaneseText: '',
+                englishText: '',
+                coptictext: '',
+                arabicText: '',
                 textcolor: Colors.black),
           ),
           ChangeNotifierProvider(
@@ -119,51 +119,51 @@ class _Koputo1State extends State<Koputo1> {
                   )),
           ChangeNotifierProvider(
             create: (context) => Liturgyofthefaithful(
-                JapaneseText: '',
-                EnglishText: '',
-                Coptictext: '',
-                ArabicText: '',
+                japaneseText: '',
+                englishText: '',
+                coptictext: '',
+                arabicText: '',
                 textcolor: Colors.black),
           ),
           ChangeNotifierProvider(
             create: (context) => Distribution(
-                JapaneseText: '',
-                EnglishText: '',
-                Coptictext: '',
-                ArabicText: '',
+                japaneseText: '',
+                englishText: '',
+                coptictext: '',
+                arabicText: '',
                 textcolor: Colors.black),
           ),
           ChangeNotifierProvider(
             create: (context) => Psalmmenu(
-                CopticTitle: '',
-                JapaneseTitle: '',
-                EnglishTitle: '',
-                ArabicTitle: '',
+                copticTitle: '',
+                japaneseTitle: '',
+                englishTitle: '',
+                arabicTitle: '',
                 index: 0),
           ),
           ChangeNotifierProvider(
             create: (context) => FirstHour(
-                JapaneseText: '',
-                EnglishText: '',
-                Coptictext: '',
-                ArabicText: '',
+                japaneseText: '',
+                englishText: '',
+                coptictext: '',
+                arabicText: '',
                 textcolor: Colors.black),
           ),
           ChangeNotifierProvider(
             create: (context) => AgpyaMenu(
-              JapaneseTitle: '',
-              EnglishTitle: '',
-              ArabicTitle: '',
+              japaneseTitle: '',
+              englishTitle: '',
+              arabicTitle: '',
               index: 0,
-              CopticTitle: '',
+              copticTitle: '',
             ),
           ),
           ChangeNotifierProvider(
             create: (context) => ThirdHour(
-                JapaneseText: '',
-                EnglishText: '',
-                Coptictext: '',
-                ArabicText: '',
+                japaneseText: '',
+                englishText: '',
+                coptictext: '',
+                arabicText: '',
                 textcolor: Colors.black),
           ),
           ChangeNotifierProvider(
@@ -176,26 +176,26 @@ class _Koputo1State extends State<Koputo1> {
           ),
           ChangeNotifierProvider(
             create: (context) => NinthHour(
-                JapaneseText: '',
-                EnglishText: '',
-                Coptictext: '',
-                ArabicText: '',
+                japaneseText: '',
+                englishText: '',
+                coptictext: '',
+                arabicText: '',
                 textcolor: Colors.black),
           ),
           ChangeNotifierProvider(
             create: (context) => EleventhHour(
-                JapaneseText: '',
-                EnglishText: '',
-                Coptictext: '',
-                ArabicText: '',
+                japaneseText: '',
+                englishText: '',
+                coptictext: '',
+                arabicText: '',
                 textcolor: Colors.black),
           ),
           ChangeNotifierProvider(
             create: (context) => TwelvethHour(
-                JapaneseText: '',
-                EnglishText: '',
-                Coptictext: '',
-                ArabicText: '',
+                japaneseText: '',
+                englishText: '',
+                coptictext: '',
+                arabicText: '',
                 textcolor: Colors.black),
           ),
           ChangeNotifierProvider(
@@ -237,13 +237,13 @@ class _Koputo1State extends State<Koputo1> {
               AgpyaScreen.agpyascreenroute: (context) => const AgpyaScreen(),
               ReadingScreen.readingscreenroute: (context) =>
                   const ReadingScreen(),
-              MatthewScreen.MatthewScreenroute: (context) => MatthewScreen(),
+              MatthewScreen.matthewScreenroute: (context) => MatthewScreen(),
               Chapter1.matthewchapter1route: (context) => const Chapter1(),
               SettingScreen.settingcreenroute: (context) =>
                   const SettingScreen(),
               PaulineEpistleScreen.PaulineEpistleScreenroute: (context) =>
                   const PaulineEpistleScreen(),
-              CatholicEpistleScreen.CatholicEpistleScreenroute: (context) =>
+              CatholicEpistleScreen.catholicEpistleScreenroute: (context) =>
                   const CatholicEpistleScreen(),
               PraxisScreen.Praxisscreenroute: (context) => const PraxisScreen(),
               PsalmandgospelScreen.psalmandgospelScreenroute: (context) =>
@@ -272,7 +272,7 @@ class _Koputo1State extends State<Koputo1> {
                   const NinthHourScreen(),
               EleventhHourScreen.eleventhHourScreenroute: (context) =>
                   const EleventhHourScreen(),
-              TwelvethHourScreen.TwelvethHourScreenroute: (context) =>
+              TwelvethHourScreen.twelvethHourScreenroute: (context) =>
                   const TwelvethHourScreen(),
             },
           ),
@@ -320,9 +320,9 @@ class _HomeScreenState extends State<HomeScreen> {
       child: Scaffold(
         // key: _scaffoldKey,
         //appBar: appbar(),
-        drawer: const sidebar(),
+        drawer: const Sidebar(),
         backgroundColor: Colors.white,
-        floatingActionButton: const floatingactionbutton(),
+        floatingActionButton: const Floatingactionbutton(),
         body: Column(
           verticalDirection: VerticalDirection.down,
           mainAxisAlignment: MainAxisAlignment.center,

@@ -80,15 +80,15 @@ class _SixthHourScreenState extends State<SixthHourScreen> {
           builder: (BuildContext context, menu1, Widget? child) => Drawer(
               child: ListView(children: [
             Column(
-              children: List.generate(menu1.SixthHourMenu1.length, (index) {
+              children: List.generate(menu1.sixthHourMenu1.length, (index) {
                 final font = context.read<ChangeFontSizeSetting>();
                 final language = context.read<ChangeLaunguageSetting>();
                 return ListTile(
                   title: CustomContainer(
-                    JapaneseText: menu1.SixthHourMenu1[index].JapaneseTitle,
-                    EnglishText: menu1.SixthHourMenu1[index].EnglishTitle,
-                    CopticText: menu1.SixthHourMenu1[index].CopticTitle,
-                    ArabicText: menu1.SixthHourMenu1[index].ArabicTitle,
+                    japaneseText: menu1.sixthHourMenu1[index].japaneseTitle,
+                    englishText: menu1.sixthHourMenu1[index].englishTitle,
+                    copticText: menu1.sixthHourMenu1[index].copticTitle,
+                    arabicText: menu1.sixthHourMenu1[index].arabicTitle,
                     color: Colors.black,
                     isCheckedJp: language.isCheckedJp!,
                     isCheckedEn: language.isCheckedEn!,
@@ -98,7 +98,7 @@ class _SixthHourScreenState extends State<SixthHourScreen> {
                   ),
                   onTap: () {
                     Navigator.pop(context);
-                    _gotoPage(menu1.SixthHourMenu1[index].index);
+                    _gotoPage(menu1.sixthHourMenu1[index].index);
                   },
                 );
               }),

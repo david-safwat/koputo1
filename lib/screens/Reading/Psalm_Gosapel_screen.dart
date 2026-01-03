@@ -276,10 +276,10 @@ class _PsalmGosapelScreenState extends State<PsalmGosapelScreen> {
                                   PsalmGospalReading reading =
                                       psalm_gospal_readings![index];
                                   return CustomContainer(
-                                    JapaneseText: reading.JapaneseText,
-                                    EnglishText: reading.EnglishText,
-                                    CopticText: reading.Coptictext,
-                                    ArabicText: reading.ArabicText,
+                                    japaneseText: reading.JapaneseText,
+                                    englishText: reading.EnglishText,
+                                    copticText: reading.Coptictext,
+                                    arabicText: reading.ArabicText,
                                     color: reading.textcolor,
                                     isCheckedJp: isCheckedJp!,
                                     isCheckedEn: isCheckedEn!,
@@ -291,23 +291,23 @@ class _PsalmGosapelScreenState extends State<PsalmGosapelScreen> {
                               ),
                               Column(
                                 children: List.generate(
-                                    Ninthhour1.IntroductionofEveryHour1.length,
+                                    Ninthhour1.introductionofEveryHour1.length,
                                     (index) {
                                   return CustomContainer(
-                                    JapaneseText: Ninthhour1
-                                        .IntroductionofEveryHour1[index]
-                                        .JapaneseText,
-                                    EnglishText: Ninthhour1
-                                        .IntroductionofEveryHour1[index]
-                                        .EnglishText,
-                                    CopticText: Ninthhour1
-                                        .IntroductionofEveryHour1[index]
-                                        .Coptictext,
-                                    ArabicText: Ninthhour1
-                                        .IntroductionofEveryHour1[index]
-                                        .ArabicText,
+                                    japaneseText: Ninthhour1
+                                        .introductionofEveryHour1[index]
+                                        .japaneseText,
+                                    englishText: Ninthhour1
+                                        .introductionofEveryHour1[index]
+                                        .englishText,
+                                    copticText: Ninthhour1
+                                        .introductionofEveryHour1[index]
+                                        .coptictext,
+                                    arabicText: Ninthhour1
+                                        .introductionofEveryHour1[index]
+                                        .arabicText,
                                     color: Ninthhour1
-                                        .IntroductionofEveryHour1[index]
+                                        .introductionofEveryHour1[index]
                                         .textcolor,
                                     isCheckedJp: isCheckedJp!,
                                     isCheckedEn: isCheckedEn!,
@@ -323,21 +323,21 @@ class _PsalmGosapelScreenState extends State<PsalmGosapelScreen> {
                         SingleChildScrollView(
                           child: Column(
                             children: List.generate(
-                                Ninthhour1.IntroductionofEveryHour1.length,
+                                Ninthhour1.introductionofEveryHour1.length,
                                 (index) {
                               return CustomContainer(
-                                JapaneseText: Ninthhour1
-                                    .IntroductionofEveryHour1[index]
-                                    .JapaneseText,
-                                EnglishText: Ninthhour1
-                                    .IntroductionofEveryHour1[index]
-                                    .EnglishText,
-                                CopticText: Ninthhour1
-                                    .IntroductionofEveryHour1[index].Coptictext,
-                                ArabicText: Ninthhour1
-                                    .IntroductionofEveryHour1[index].ArabicText,
+                                japaneseText: Ninthhour1
+                                    .introductionofEveryHour1[index]
+                                    .japaneseText,
+                                englishText: Ninthhour1
+                                    .introductionofEveryHour1[index]
+                                    .englishText,
+                                copticText: Ninthhour1
+                                    .introductionofEveryHour1[index].coptictext,
+                                arabicText: Ninthhour1
+                                    .introductionofEveryHour1[index].arabicText,
                                 color: Ninthhour1
-                                    .IntroductionofEveryHour1[index].textcolor,
+                                    .introductionofEveryHour1[index].textcolor,
                                 isCheckedJp: isCheckedJp!,
                                 isCheckedEn: isCheckedEn!,
                                 isCheckedCo: isCheckedCo!,

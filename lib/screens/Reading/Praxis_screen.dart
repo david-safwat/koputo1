@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:koputo1/screens/Reading/Synaxarion_screen.dart';
+import 'package:koputo1/screens/Reading/synaxarion_screen.dart';
 import 'package:koputo1/screens/bible_screen.dart';
 import 'package:koputo1/widgets/custom_ruby_text.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -456,6 +456,7 @@ class _ReadingScreenState extends State<PraxisScreen> {
           });
         },
         label: CustomRubyText(
-            text: text, style: const TextStyle(fontSize: 20, color: Colors.blue)));
+            text: text,
+            style: const TextStyle(fontSize: 20, color: Colors.blue)));
   }
 }

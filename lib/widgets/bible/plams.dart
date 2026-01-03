@@ -9,7 +9,7 @@ class Plams extends StatelessWidget {
   });
 
   final int itemindex;
-  final selectchapters selectchapter;
+  final Selectchapters selectchapter;
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,8 @@ class Plams extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
               child: Expanded(
                 child: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 5),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 30, vertical: 5),
                   decoration: BoxDecoration(
                       color: Colors.black54,
                       borderRadius: BorderRadius.circular(5)),

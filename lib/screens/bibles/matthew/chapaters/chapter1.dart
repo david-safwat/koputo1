@@ -85,7 +85,7 @@ class chapter1 extends State<Chapter1> {
         imagepathsch2.map((path) => Image.asset(path)).toList();
     return Scaffold(
       backgroundColor: Colors.white,
-      drawer: const sidebar(),
+      drawer: const Sidebar(),
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,

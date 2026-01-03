@@ -29,10 +29,10 @@ class ReadingPage extends StatelessWidget {
           children: List.generate(reading.length, (index) {
             final itme = reading[index];
             return CustomContainer(
-              JapaneseText: itme.JapaneseText,
-              EnglishText: itme.EnglishText,
-              CopticText: itme.Coptictext,
-              ArabicText: itme.ArabicText,
+              japaneseText: itme.JapaneseText,
+              englishText: itme.EnglishText,
+              copticText: itme.Coptictext,
+              arabicText: itme.ArabicText,
               color: itme.textcolor,
               isCheckedJp: isCheckedJp,
               isCheckedEn: isCheckedEn,

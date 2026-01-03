@@ -9,7 +9,7 @@ class Biblename {
 }
 
 //list of bible
-const Bible_name = [
+const biblename = [
   Biblename(id: 'b1', title: '創世記'),
   Biblename(id: 'b2', title: '出エジプト記'),
   Biblename(id: 'b3', title: 'レビ記'),
@@ -66,19 +66,19 @@ const Bible_name = [
   Biblename(id: 'b54', title: 'ヨハネの黙示録'),
 ];
 
-class selectchapters {
+class Selectchapters {
   final String id;
   final List<String> chapternumber;
   final String chaptercataogry;
 
-  const selectchapters(
+  const Selectchapters(
       {required this.id,
       required this.chapternumber,
       required this.chaptercataogry});
 }
 
-const bible_chapters = [
-  selectchapters(
+const biblechapters = [
+  Selectchapters(
       id: 'ch1',
       chapternumber: [
         'Chapter 1',

@@ -98,15 +98,15 @@ class _FirstHourScreenState extends State<FirstHourScreen> {
           builder: (BuildContext context, menu1, Widget? child) => Drawer(
               child: ListView(children: [
             Column(
-              children: List.generate(menu1.FirstHourMenu1.length, (index) {
+              children: List.generate(menu1.firstHourMenu1.length, (index) {
                 final font = context.read<ChangeFontSizeSetting>();
                 final language = context.read<ChangeLaunguageSetting>();
                 return ListTile(
                   title: CustomContainer(
-                    JapaneseText: menu1.FirstHourMenu1[index].JapaneseTitle,
-                    EnglishText: menu1.FirstHourMenu1[index].EnglishTitle,
-                    CopticText: menu1.FirstHourMenu1[index].CopticTitle,
-                    ArabicText: menu1.FirstHourMenu1[index].ArabicTitle,
+                    japaneseText: menu1.firstHourMenu1[index].japaneseTitle,
+                    englishText: menu1.firstHourMenu1[index].englishTitle,
+                    copticText: menu1.firstHourMenu1[index].copticTitle,
+                    arabicText: menu1.firstHourMenu1[index].arabicTitle,
                     color: Colors.black,
                     isCheckedJp: language.checkJp!,
                     isCheckedEn: language.isCheckedEn!,
@@ -116,7 +116,7 @@ class _FirstHourScreenState extends State<FirstHourScreen> {
                   ),
                   onTap: () {
                     Navigator.pop(context);
-                    _gotoPage(menu1.FirstHourMenu1[index].index);
+                    _gotoPage(menu1.firstHourMenu1[index].index);
                   },
                 );
               }),

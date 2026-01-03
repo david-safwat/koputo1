@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:koputo1/screens/Reading/Catholic_Epistle_screen.dart';
 import 'package:koputo1/screens/Reading/Pauline_Epistle_screen.dart';
 import 'package:koputo1/screens/Reading/Praxis_screen.dart';
-import 'package:koputo1/screens/Reading/Psalm_Gosapel_screen.dart';
-import 'package:koputo1/screens/Reading/PsalmandGospel_screen.dart';
-import 'package:koputo1/screens/Reading/Synaxarion_screen.dart';
+import 'package:koputo1/screens/Reading/psalm_Gosapel_screen.dart';
+import 'package:koputo1/screens/Reading/psalmandGospel_screen.dart';
+import 'package:koputo1/screens/Reading/synaxarion_screen.dart';
 import 'package:koputo1/widgets/custom_ruby_text.dart';
 
 class ReadingScreen extends StatefulWidget {
@@ -22,7 +22,7 @@ void seclectPaulineEpistle(BuildContext context) {
 
 void seclectCatholicEpistle(BuildContext context) {
   Navigator.of(context)
-      .pushNamed(CatholicEpistleScreen.CatholicEpistleScreenroute);
+      .pushNamed(CatholicEpistleScreen.catholicEpistleScreenroute);
 }
 
 void seclectPraxis(BuildContext context) {
@@ -121,8 +121,8 @@ class _ReadingScreenState extends State<ReadingScreen> {
   }
 
   OrientationBuilder customcontainer3(
-      String JapaneseText, String EnglishText, String ArabicText) {
-    return OrientationBuilder(builder: (context, Orientation) {
+      String japaneseText, String englishText, String arabicText) {
+    return OrientationBuilder(builder: (context, orientation) {
       //get screen width
       double screenwidth = MediaQuery.of(context).size.width;
 
@@ -139,7 +139,7 @@ class _ReadingScreenState extends State<ReadingScreen> {
             SizedBox(
               width: containerwidth,
               child: CustomRubyText(
-                  text: JapaneseText,
+                  text: japaneseText,
                   style:
                       const TextStyle(fontSize: 20, color: Colors.redAccent)),
             ),
@@ -149,7 +149,7 @@ class _ReadingScreenState extends State<ReadingScreen> {
                 child: Text(
                     style:
                         const TextStyle(fontSize: 20, color: Colors.redAccent),
-                    EnglishText)),
+                    englishText)),
             const Spacer(),
             SizedBox(
                 width: containerwidth,
@@ -157,7 +157,7 @@ class _ReadingScreenState extends State<ReadingScreen> {
                     textDirection: TextDirection.rtl,
                     style:
                         const TextStyle(fontSize: 20, color: Colors.redAccent),
-                    ArabicText)),
+                    arabicText)),
           ],
         ),
       );
@@ -165,8 +165,8 @@ class _ReadingScreenState extends State<ReadingScreen> {
   }
 
   OrientationBuilder customcontainer2(
-      String JapaneseText, String EnglishText, String ArabicText) {
-    return OrientationBuilder(builder: (context, Orientation) {
+      String japaneseText, String englishText, String arabicText) {
+    return OrientationBuilder(builder: (context, orientation) {
       //get screen width
       double screenwidth = MediaQuery.of(context).size.width;
 
@@ -186,14 +186,14 @@ class _ReadingScreenState extends State<ReadingScreen> {
               SizedBox(
                 width: containerwidth,
                 child: CustomRubyText(
-                    text: JapaneseText,
+                    text: japaneseText,
                     style: const TextStyle(fontSize: 20, color: Colors.blue)),
               ),
               const Spacer(),
               SizedBox(
                   width: containerwidth,
                   child: Text(
-                    EnglishText,
+                    englishText,
                     style: const TextStyle(fontSize: 20, color: Colors.blue),
                   )),
               const Spacer(),
@@ -201,7 +201,7 @@ class _ReadingScreenState extends State<ReadingScreen> {
                   width: containerwidth,
                   child: Text(
                       textDirection: TextDirection.rtl,
-                      ArabicText,
+                      arabicText,
                       style:
                           const TextStyle(fontSize: 20, color: Colors.blue))),
             ],
@@ -210,8 +210,8 @@ class _ReadingScreenState extends State<ReadingScreen> {
   }
 
   OrientationBuilder customcontainer(
-      String JapaneseText, String EnglishText, String ArabicText) {
-    return OrientationBuilder(builder: (context, Orientation) {
+      String japaneseText, String englishText, String arabicText) {
+    return OrientationBuilder(builder: (context, orientation) {
       //get screen width
       double screenwidth = MediaQuery.of(context).size.width;
 
@@ -228,12 +228,12 @@ class _ReadingScreenState extends State<ReadingScreen> {
             SizedBox(
               width: containerwidth,
               child: CustomRubyText(
-                  text: JapaneseText, style: const TextStyle(fontSize: 20)),
+                  text: japaneseText, style: const TextStyle(fontSize: 20)),
             ),
             const Spacer(),
             SizedBox(
                 width: containerwidth,
-                child: Text(style: const TextStyle(fontSize: 20), EnglishText)),
+                child: Text(style: const TextStyle(fontSize: 20), englishText)),
             const Spacer(),
             SizedBox(
                 width: containerwidth,
@@ -242,16 +242,16 @@ class _ReadingScreenState extends State<ReadingScreen> {
                     style: const TextStyle(
                       fontSize: 20,
                     ),
-                    ArabicText)),
+                    arabicText)),
           ],
         ),
       );
     });
   }
 
-  OrientationBuilder customcontainer4(String JapaneseText, String EnglishText,
-      String CopticarabicText, String ArabicText) {
-    return OrientationBuilder(builder: (context, Orientation) {
+  OrientationBuilder customcontainer4(String japaneseText, String englishText,
+      String copticarabicText, String arabicText) {
+    return OrientationBuilder(builder: (context, orientation) {
       //get screen width
       double screenwidth = MediaQuery.of(context).size.width;
 
@@ -268,12 +268,12 @@ class _ReadingScreenState extends State<ReadingScreen> {
             SizedBox(
               width: containerwidth,
               child: CustomRubyText(
-                  text: JapaneseText, style: const TextStyle(fontSize: 20)),
+                  text: japaneseText, style: const TextStyle(fontSize: 20)),
             ),
             const Spacer(),
             SizedBox(
                 width: containerwidth,
-                child: Text(style: const TextStyle(fontSize: 20), EnglishText)),
+                child: Text(style: const TextStyle(fontSize: 20), englishText)),
             const Spacer(),
             SizedBox(
                 width: containerwidth,
@@ -282,7 +282,7 @@ class _ReadingScreenState extends State<ReadingScreen> {
                     style: const TextStyle(
                       fontSize: 20,
                     ),
-                    CopticarabicText)),
+                    copticarabicText)),
             const Spacer(),
             SizedBox(
                 width: containerwidth,
@@ -291,16 +291,16 @@ class _ReadingScreenState extends State<ReadingScreen> {
                     style: const TextStyle(
                       fontSize: 20,
                     ),
-                    ArabicText)),
+                    arabicText)),
           ],
         ),
       );
     });
   }
 
-  OrientationBuilder customcontainer5(String JapaneseText, String EnglishText,
-      String CopticArabicText, String ArabicText) {
-    return OrientationBuilder(builder: (context, Orientation) {
+  OrientationBuilder customcontainer5(String japaneseText, String englishText,
+      String copticArabicText, String arabicText) {
+    return OrientationBuilder(builder: (context, orientation) {
       //get screen width
       double screenwidth = MediaQuery.of(context).size.width;
 
@@ -317,7 +317,7 @@ class _ReadingScreenState extends State<ReadingScreen> {
             SizedBox(
               width: containerwidth,
               child: CustomRubyText(
-                  text: JapaneseText,
+                  text: japaneseText,
                   style: const TextStyle(fontSize: 20, color: Colors.blue)),
             ),
             const Spacer(),
@@ -325,7 +325,7 @@ class _ReadingScreenState extends State<ReadingScreen> {
                 width: containerwidth,
                 child: Text(
                     style: const TextStyle(fontSize: 20, color: Colors.blue),
-                    EnglishText)),
+                    englishText)),
             const Spacer(),
             SizedBox(
                 width: containerwidth,
@@ -335,14 +335,14 @@ class _ReadingScreenState extends State<ReadingScreen> {
                         fontSize: 20,
                         color: Colors.blue,
                         fontFamily: 'fonts/NotoSansCoptic-Regular.ttf'),
-                    CopticArabicText)),
+                    copticArabicText)),
             const Spacer(),
             SizedBox(
                 width: containerwidth,
                 child: Text(
                     textDirection: TextDirection.rtl,
                     style: const TextStyle(fontSize: 20, color: Colors.blue),
-                    ArabicText)),
+                    arabicText)),
           ],
         ),
       );

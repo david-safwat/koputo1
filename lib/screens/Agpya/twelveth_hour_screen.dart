@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:koputo1/models/Agpya/Twelveth_hour.dart';
+import 'package:koputo1/models/Agpya/twelveth_hour.dart';
 import 'package:koputo1/models/Agpya/agpya_menu.dart';
 import 'package:koputo1/models/Agpya/first_hour.dart';
 import 'package:koputo1/models/psalms_chapters/psalmchapter.dart';
@@ -12,7 +12,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class TwelvethHourScreen extends StatefulWidget {
   const TwelvethHourScreen({super.key});
-  static const TwelvethHourScreenroute = '/TwelvethHourScreen';
+  static const twelvethHourScreenroute = '/TwelvethHourScreen';
 
   @override
   State<TwelvethHourScreen> createState() => _TwelvethHourScreenState();
@@ -148,14 +148,14 @@ class _TwelvethHourScreenState extends State<TwelvethHourScreen> {
                 child: ListView(children: [
               Column(
                 children:
-                    List.generate(menu1.Twelvethhourmenu1.length, (index) {
+                    List.generate(menu1.twelvethhourmenu1.length, (index) {
                   return ListTile(
                     title: CustomContainer(
-                      JapaneseText:
-                          menu1.Twelvethhourmenu1[index].JapaneseTitle,
-                      EnglishText: menu1.Twelvethhourmenu1[index].EnglishTitle,
-                      CopticText: menu1.Twelvethhourmenu1[index].CopticTitle,
-                      ArabicText: menu1.Twelvethhourmenu1[index].ArabicTitle,
+                      japaneseText:
+                          menu1.twelvethhourmenu1[index].japaneseTitle,
+                      englishText: menu1.twelvethhourmenu1[index].englishTitle,
+                      copticText: menu1.twelvethhourmenu1[index].copticTitle,
+                      arabicText: menu1.twelvethhourmenu1[index].arabicTitle,
                       color: Colors.black,
                       isCheckedJp: isCheckedJp!,
                       isCheckedEn: isCheckedEn!,
@@ -165,7 +165,7 @@ class _TwelvethHourScreenState extends State<TwelvethHourScreen> {
                     ),
                     onTap: () {
                       Navigator.pop(context);
-                      _gotoPage(menu1.Twelvethhourmenu1[index].index);
+                      _gotoPage(menu1.twelvethhourmenu1[index].index);
                     },
                   );
                 }),
@@ -233,8 +233,8 @@ class _TwelvethHourScreenState extends State<TwelvethHourScreen> {
                   ];
                 },
                 body: Consumer3<Psalmchapter, TwelvethHour, FirstHour>(
-                  builder: (BuildContext context, Psalmchapter, Twelevethhour1,
-                          Firsthour1, Widget? child) =>
+                  builder: (BuildContext context, psalmchapter, twelevethhour1,
+                          firsthour1, Widget? child) =>
                       PageView(
                           controller: _pageController,
                           onPageChanged: (index) {
@@ -247,21 +247,21 @@ class _TwelvethHourScreenState extends State<TwelvethHourScreen> {
                         SingleChildScrollView(
                           child: Column(
                             children: List.generate(
-                                Twelevethhour1.IntroductionofEveryHour1.length,
+                                twelevethhour1.introductionofEveryHour1.length,
                                 (index) {
                               return CustomContainer(
-                                JapaneseText: Twelevethhour1
-                                    .IntroductionofEveryHour1[index]
-                                    .JapaneseText,
-                                EnglishText: Twelevethhour1
-                                    .IntroductionofEveryHour1[index]
-                                    .EnglishText,
-                                CopticText: Twelevethhour1
-                                    .IntroductionofEveryHour1[index].Coptictext,
-                                ArabicText: Twelevethhour1
-                                    .IntroductionofEveryHour1[index].ArabicText,
-                                color: Twelevethhour1
-                                    .IntroductionofEveryHour1[index].textcolor,
+                                japaneseText: twelevethhour1
+                                    .introductionofEveryHour1[index]
+                                    .japaneseText,
+                                englishText: twelevethhour1
+                                    .introductionofEveryHour1[index]
+                                    .englishText,
+                                copticText: twelevethhour1
+                                    .introductionofEveryHour1[index].coptictext,
+                                arabicText: twelevethhour1
+                                    .introductionofEveryHour1[index].arabicText,
+                                color: twelevethhour1
+                                    .introductionofEveryHour1[index].textcolor,
                                 isCheckedJp: isCheckedJp!,
                                 isCheckedEn: isCheckedEn!,
                                 isCheckedCo: isCheckedCo!,
@@ -274,18 +274,18 @@ class _TwelvethHourScreenState extends State<TwelvethHourScreen> {
                         SingleChildScrollView(
                           child: Column(
                             children: List.generate(
-                                Twelevethhour1.OurFather1.length, (index) {
+                                twelevethhour1.ourFather1.length, (index) {
                               return CustomContainer(
-                                JapaneseText: Twelevethhour1
-                                    .OurFather1[index].JapaneseText,
-                                EnglishText: Twelevethhour1
-                                    .OurFather1[index].EnglishText,
-                                CopticText:
-                                    Twelevethhour1.OurFather1[index].Coptictext,
-                                ArabicText:
-                                    Twelevethhour1.OurFather1[index].ArabicText,
+                                japaneseText: twelevethhour1
+                                    .ourFather1[index].japaneseText,
+                                englishText: twelevethhour1
+                                    .ourFather1[index].englishText,
+                                copticText:
+                                    twelevethhour1.ourFather1[index].coptictext,
+                                arabicText:
+                                    twelevethhour1.ourFather1[index].arabicText,
                                 color:
-                                    Twelevethhour1.OurFather1[index].textcolor,
+                                    twelevethhour1.ourFather1[index].textcolor,
                                 isCheckedJp: isCheckedJp!,
                                 isCheckedEn: isCheckedEn!,
                                 isCheckedCo: isCheckedCo!,
@@ -298,21 +298,21 @@ class _TwelvethHourScreenState extends State<TwelvethHourScreen> {
                         SingleChildScrollView(
                           child: Column(
                             children: List.generate(
-                                Twelevethhour1.ThePrayerofThanksgiving1.length,
+                                twelevethhour1.thePrayerofThanksgiving1.length,
                                 (index) {
                               return CustomContainer(
-                                JapaneseText: Twelevethhour1
-                                    .ThePrayerofThanksgiving1[index]
-                                    .JapaneseText,
-                                EnglishText: Twelevethhour1
-                                    .ThePrayerofThanksgiving1[index]
-                                    .EnglishText,
-                                CopticText: Twelevethhour1
-                                    .ThePrayerofThanksgiving1[index].Coptictext,
-                                ArabicText: Twelevethhour1
-                                    .ThePrayerofThanksgiving1[index].ArabicText,
-                                color: Twelevethhour1
-                                    .ThePrayerofThanksgiving1[index].textcolor,
+                                japaneseText: twelevethhour1
+                                    .thePrayerofThanksgiving1[index]
+                                    .japaneseText,
+                                englishText: twelevethhour1
+                                    .thePrayerofThanksgiving1[index]
+                                    .englishText,
+                                copticText: twelevethhour1
+                                    .thePrayerofThanksgiving1[index].coptictext,
+                                arabicText: twelevethhour1
+                                    .thePrayerofThanksgiving1[index].arabicText,
+                                color: twelevethhour1
+                                    .thePrayerofThanksgiving1[index].textcolor,
                                 isCheckedJp: isCheckedJp!,
                                 isCheckedEn: isCheckedEn!,
                                 isCheckedCo: isCheckedCo!,
@@ -325,17 +325,17 @@ class _TwelvethHourScreenState extends State<TwelvethHourScreen> {
                         SingleChildScrollView(
                           child: Column(
                             children: List.generate(
-                                Twelevethhour1.psalmchapter50s.length, (index) {
+                                twelevethhour1.psalmchapter50s.length, (index) {
                               return CustomContainer(
-                                JapaneseText: Twelevethhour1
-                                    .psalmchapter50s[index].JapaneseText,
-                                EnglishText: Twelevethhour1
-                                    .psalmchapter50s[index].EnglishText,
-                                CopticText: Twelevethhour1
-                                    .psalmchapter50s[index].Coptictext,
-                                ArabicText: Twelevethhour1
-                                    .psalmchapter50s[index].ArabicText,
-                                color: Twelevethhour1
+                                japaneseText: twelevethhour1
+                                    .psalmchapter50s[index].japaneseText,
+                                englishText: twelevethhour1
+                                    .psalmchapter50s[index].englishText,
+                                copticText: twelevethhour1
+                                    .psalmchapter50s[index].coptictext,
+                                arabicText: twelevethhour1
+                                    .psalmchapter50s[index].arabicText,
+                                color: twelevethhour1
                                     .psalmchapter50s[index].textcolor,
                                 isCheckedJp: isCheckedJp!,
                                 isCheckedEn: isCheckedEn!,
@@ -349,18 +349,18 @@ class _TwelvethHourScreenState extends State<TwelvethHourScreen> {
                         SingleChildScrollView(
                           child: Column(
                             children: List.generate(
-                                Twelevethhour1.Introduction1.length, (index) {
+                                twelevethhour1.introduction1.length, (index) {
                               return CustomContainer(
-                                JapaneseText: Twelevethhour1
-                                    .Introduction1[index].JapaneseText,
-                                EnglishText: Twelevethhour1
-                                    .Introduction1[index].EnglishText,
-                                CopticText: Twelevethhour1
-                                    .Introduction1[index].Coptictext,
-                                ArabicText: Twelevethhour1
-                                    .Introduction1[index].ArabicText,
-                                color: Twelevethhour1
-                                    .Introduction1[index].textcolor,
+                                japaneseText: twelevethhour1
+                                    .introduction1[index].japaneseText,
+                                englishText: twelevethhour1
+                                    .introduction1[index].englishText,
+                                copticText: twelevethhour1
+                                    .introduction1[index].coptictext,
+                                arabicText: twelevethhour1
+                                    .introduction1[index].arabicText,
+                                color: twelevethhour1
+                                    .introduction1[index].textcolor,
                                 isCheckedJp: isCheckedJp!,
                                 isCheckedEn: isCheckedEn!,
                                 isCheckedCo: isCheckedCo!,
@@ -373,18 +373,18 @@ class _TwelvethHourScreenState extends State<TwelvethHourScreen> {
                         SingleChildScrollView(
                           child: Column(
                             children: List.generate(
-                                Twelevethhour1.psalm129s.length, (index) {
+                                twelevethhour1.psalm129s.length, (index) {
                               return CustomContainer(
-                                JapaneseText: Twelevethhour1
-                                    .psalm129s[index].JapaneseText,
-                                EnglishText:
-                                    Twelevethhour1.psalm129s[index].EnglishText,
-                                CopticText:
-                                    Twelevethhour1.psalm129s[index].Coptictext,
-                                ArabicText:
-                                    Twelevethhour1.psalm129s[index].ArabicText,
+                                japaneseText: twelevethhour1
+                                    .psalm129s[index].japaneseText,
+                                englishText:
+                                    twelevethhour1.psalm129s[index].englishText,
+                                copticText:
+                                    twelevethhour1.psalm129s[index].coptictext,
+                                arabicText:
+                                    twelevethhour1.psalm129s[index].arabicText,
                                 color:
-                                    Twelevethhour1.psalm129s[index].textcolor,
+                                    twelevethhour1.psalm129s[index].textcolor,
                                 isCheckedJp: isCheckedJp!,
                                 isCheckedEn: isCheckedEn!,
                                 isCheckedCo: isCheckedCo!,
@@ -397,19 +397,19 @@ class _TwelvethHourScreenState extends State<TwelvethHourScreen> {
                         SingleChildScrollView(
                           child: Column(
                             children: List.generate(
-                              Twelevethhour1.psalm30s.length,
+                              twelevethhour1.psalm30s.length,
                               (index) {
                                 return CustomContainer(
-                                  JapaneseText: Twelevethhour1
-                                      .psalm30s[index].JapaneseText,
-                                  EnglishText: Twelevethhour1
-                                      .psalm30s[index].EnglishText,
-                                  CopticText:
-                                      Twelevethhour1.psalm30s[index].Coptictext,
-                                  ArabicText:
-                                      Twelevethhour1.psalm30s[index].ArabicText,
+                                  japaneseText: twelevethhour1
+                                      .psalm30s[index].japaneseText,
+                                  englishText: twelevethhour1
+                                      .psalm30s[index].englishText,
+                                  copticText:
+                                      twelevethhour1.psalm30s[index].coptictext,
+                                  arabicText:
+                                      twelevethhour1.psalm30s[index].arabicText,
                                   color:
-                                      Twelevethhour1.psalm30s[index].textcolor,
+                                      twelevethhour1.psalm30s[index].textcolor,
                                   isCheckedJp: isCheckedJp!,
                                   isCheckedEn: isCheckedEn!,
                                   isCheckedCo: isCheckedCo!,
@@ -423,18 +423,18 @@ class _TwelvethHourScreenState extends State<TwelvethHourScreen> {
                         SingleChildScrollView(
                           child: Column(
                             children: List.generate(
-                              Twelevethhour1.psalm131s.length,
+                              twelevethhour1.psalm131s.length,
                               (index) {
                                 return CustomContainer(
-                                  JapaneseText: Twelevethhour1
-                                      .psalm131s[index].JapaneseText,
-                                  EnglishText: Twelevethhour1
-                                      .psalm131s[index].EnglishText,
-                                  CopticText: Twelevethhour1
-                                      .psalm131s[index].Coptictext,
-                                  ArabicText: Twelevethhour1
-                                      .psalm131s[index].ArabicText,
-                                  color: Psalmchapter3[index].textcolor,
+                                  japaneseText: twelevethhour1
+                                      .psalm131s[index].japaneseText,
+                                  englishText: twelevethhour1
+                                      .psalm131s[index].englishText,
+                                  copticText: twelevethhour1
+                                      .psalm131s[index].coptictext,
+                                  arabicText: twelevethhour1
+                                      .psalm131s[index].arabicText,
+                                  color: psalmchapter3[index].textcolor,
                                   isCheckedJp: isCheckedJp!,
                                   isCheckedEn: isCheckedEn!,
                                   isCheckedCo: isCheckedCo!,
@@ -448,19 +448,19 @@ class _TwelvethHourScreenState extends State<TwelvethHourScreen> {
                         SingleChildScrollView(
                           child: Column(
                             children: List.generate(
-                              Twelevethhour1.psalm132s.length,
+                              twelevethhour1.psalm132s.length,
                               (index) {
                                 return CustomContainer(
-                                  JapaneseText: Twelevethhour1
-                                      .psalm132s[index].JapaneseText,
-                                  EnglishText: Twelevethhour1
-                                      .psalm132s[index].EnglishText,
-                                  CopticText: Twelevethhour1
-                                      .psalm132s[index].Coptictext,
-                                  ArabicText: Twelevethhour1
-                                      .psalm132s[index].ArabicText,
+                                  japaneseText: twelevethhour1
+                                      .psalm132s[index].japaneseText,
+                                  englishText: twelevethhour1
+                                      .psalm132s[index].englishText,
+                                  copticText: twelevethhour1
+                                      .psalm132s[index].coptictext,
+                                  arabicText: twelevethhour1
+                                      .psalm132s[index].arabicText,
                                   color:
-                                      Twelevethhour1.psalm132s[index].textcolor,
+                                      twelevethhour1.psalm132s[index].textcolor,
                                   isCheckedJp: isCheckedJp!,
                                   isCheckedEn: isCheckedEn!,
                                   isCheckedCo: isCheckedCo!,
@@ -474,19 +474,19 @@ class _TwelvethHourScreenState extends State<TwelvethHourScreen> {
                         SingleChildScrollView(
                           child: Column(
                             children: List.generate(
-                              Twelevethhour1.psalm133s.length,
+                              twelevethhour1.psalm133s.length,
                               (index) {
                                 return CustomContainer(
-                                  JapaneseText: Twelevethhour1
-                                      .psalm133s[index].JapaneseText,
-                                  EnglishText: Twelevethhour1
-                                      .psalm133s[index].EnglishText,
-                                  CopticText: Twelevethhour1
-                                      .psalm133s[index].Coptictext,
-                                  ArabicText: Twelevethhour1
-                                      .psalm133s[index].ArabicText,
+                                  japaneseText: twelevethhour1
+                                      .psalm133s[index].japaneseText,
+                                  englishText: twelevethhour1
+                                      .psalm133s[index].englishText,
+                                  copticText: twelevethhour1
+                                      .psalm133s[index].coptictext,
+                                  arabicText: twelevethhour1
+                                      .psalm133s[index].arabicText,
                                   color:
-                                      Twelevethhour1.psalm133s[index].textcolor,
+                                      twelevethhour1.psalm133s[index].textcolor,
                                   isCheckedJp: isCheckedJp!,
                                   isCheckedEn: isCheckedEn!,
                                   isCheckedCo: isCheckedCo!,
@@ -500,19 +500,19 @@ class _TwelvethHourScreenState extends State<TwelvethHourScreen> {
                         SingleChildScrollView(
                           child: Column(
                             children: List.generate(
-                              Twelevethhour1.psalm136s.length,
+                              twelevethhour1.psalm136s.length,
                               (index) {
                                 return CustomContainer(
-                                  JapaneseText: Twelevethhour1
-                                      .psalm136s[index].JapaneseText,
-                                  EnglishText: Twelevethhour1
-                                      .psalm136s[index].EnglishText,
-                                  CopticText: Twelevethhour1
-                                      .psalm136s[index].Coptictext,
-                                  ArabicText: Twelevethhour1
-                                      .psalm136s[index].ArabicText,
+                                  japaneseText: twelevethhour1
+                                      .psalm136s[index].japaneseText,
+                                  englishText: twelevethhour1
+                                      .psalm136s[index].englishText,
+                                  copticText: twelevethhour1
+                                      .psalm136s[index].coptictext,
+                                  arabicText: twelevethhour1
+                                      .psalm136s[index].arabicText,
                                   color:
-                                      Twelevethhour1.psalm136s[index].textcolor,
+                                      twelevethhour1.psalm136s[index].textcolor,
                                   isCheckedJp: isCheckedJp!,
                                   isCheckedEn: isCheckedEn!,
                                   isCheckedCo: isCheckedCo!,
@@ -526,19 +526,19 @@ class _TwelvethHourScreenState extends State<TwelvethHourScreen> {
                         SingleChildScrollView(
                           child: Column(
                             children: List.generate(
-                              Twelevethhour1.psalm137s.length,
+                              twelevethhour1.psalm137s.length,
                               (index) {
                                 return CustomContainer(
-                                  JapaneseText: Twelevethhour1
-                                      .psalm137s[index].JapaneseText,
-                                  EnglishText: Twelevethhour1
-                                      .psalm137s[index].EnglishText,
-                                  CopticText: Twelevethhour1
-                                      .psalm137s[index].Coptictext,
-                                  ArabicText: Twelevethhour1
-                                      .psalm137s[index].ArabicText,
+                                  japaneseText: twelevethhour1
+                                      .psalm137s[index].japaneseText,
+                                  englishText: twelevethhour1
+                                      .psalm137s[index].englishText,
+                                  copticText: twelevethhour1
+                                      .psalm137s[index].coptictext,
+                                  arabicText: twelevethhour1
+                                      .psalm137s[index].arabicText,
                                   color:
-                                      Twelevethhour1.psalm137s[index].textcolor,
+                                      twelevethhour1.psalm137s[index].textcolor,
                                   isCheckedJp: isCheckedJp!,
                                   isCheckedEn: isCheckedEn!,
                                   isCheckedCo: isCheckedCo!,
@@ -552,19 +552,19 @@ class _TwelvethHourScreenState extends State<TwelvethHourScreen> {
                         SingleChildScrollView(
                           child: Column(
                             children: List.generate(
-                              Twelevethhour1.psalm140s.length,
+                              twelevethhour1.psalm140s.length,
                               (index) {
                                 return CustomContainer(
-                                  JapaneseText: Twelevethhour1
-                                      .psalm140s[index].JapaneseText,
-                                  EnglishText: Twelevethhour1
-                                      .psalm140s[index].EnglishText,
-                                  CopticText: Twelevethhour1
-                                      .psalm140s[index].Coptictext,
-                                  ArabicText: Twelevethhour1
-                                      .psalm140s[index].ArabicText,
+                                  japaneseText: twelevethhour1
+                                      .psalm140s[index].japaneseText,
+                                  englishText: twelevethhour1
+                                      .psalm140s[index].englishText,
+                                  copticText: twelevethhour1
+                                      .psalm140s[index].coptictext,
+                                  arabicText: twelevethhour1
+                                      .psalm140s[index].arabicText,
                                   color:
-                                      Twelevethhour1.psalm140s[index].textcolor,
+                                      twelevethhour1.psalm140s[index].textcolor,
                                   isCheckedJp: isCheckedJp!,
                                   isCheckedEn: isCheckedEn!,
                                   isCheckedCo: isCheckedCo!,
@@ -578,19 +578,19 @@ class _TwelvethHourScreenState extends State<TwelvethHourScreen> {
                         SingleChildScrollView(
                           child: Column(
                             children: List.generate(
-                              Twelevethhour1.psalm141s.length,
+                              twelevethhour1.psalm141s.length,
                               (index) {
                                 return CustomContainer(
-                                  JapaneseText: Twelevethhour1
-                                      .psalm141s[index].JapaneseText,
-                                  EnglishText: Twelevethhour1
-                                      .psalm141s[index].EnglishText,
-                                  CopticText: Twelevethhour1
-                                      .psalm141s[index].Coptictext,
-                                  ArabicText: Twelevethhour1
-                                      .psalm141s[index].ArabicText,
+                                  japaneseText: twelevethhour1
+                                      .psalm141s[index].japaneseText,
+                                  englishText: twelevethhour1
+                                      .psalm141s[index].englishText,
+                                  copticText: twelevethhour1
+                                      .psalm141s[index].coptictext,
+                                  arabicText: twelevethhour1
+                                      .psalm141s[index].arabicText,
                                   color:
-                                      Twelevethhour1.psalm141s[index].textcolor,
+                                      twelevethhour1.psalm141s[index].textcolor,
                                   isCheckedJp: isCheckedJp!,
                                   isCheckedEn: isCheckedEn!,
                                   isCheckedCo: isCheckedCo!,
@@ -604,19 +604,19 @@ class _TwelvethHourScreenState extends State<TwelvethHourScreen> {
                         SingleChildScrollView(
                           child: Column(
                             children: List.generate(
-                              Twelevethhour1.psalm145s.length,
+                              twelevethhour1.psalm145s.length,
                               (index) {
                                 return CustomContainer(
-                                  JapaneseText: Twelevethhour1
-                                      .psalm145s[index].JapaneseText,
-                                  EnglishText: Twelevethhour1
-                                      .psalm145s[index].EnglishText,
-                                  CopticText: Twelevethhour1
-                                      .psalm145s[index].Coptictext,
-                                  ArabicText: Twelevethhour1
-                                      .psalm145s[index].ArabicText,
+                                  japaneseText: twelevethhour1
+                                      .psalm145s[index].japaneseText,
+                                  englishText: twelevethhour1
+                                      .psalm145s[index].englishText,
+                                  copticText: twelevethhour1
+                                      .psalm145s[index].coptictext,
+                                  arabicText: twelevethhour1
+                                      .psalm145s[index].arabicText,
                                   color:
-                                      Twelevethhour1.psalm145s[index].textcolor,
+                                      twelevethhour1.psalm145s[index].textcolor,
                                   isCheckedJp: isCheckedJp!,
                                   isCheckedEn: isCheckedEn!,
                                   isCheckedCo: isCheckedCo!,
@@ -630,19 +630,19 @@ class _TwelvethHourScreenState extends State<TwelvethHourScreen> {
                         SingleChildScrollView(
                           child: Column(
                             children: List.generate(
-                              Twelevethhour1.psalm146s.length,
+                              twelevethhour1.psalm146s.length,
                               (index) {
                                 return CustomContainer(
-                                  JapaneseText: Twelevethhour1
-                                      .psalm146s[index].JapaneseText,
-                                  EnglishText: Twelevethhour1
-                                      .psalm146s[index].EnglishText,
-                                  CopticText: Twelevethhour1
-                                      .psalm146s[index].Coptictext,
-                                  ArabicText: Twelevethhour1
-                                      .psalm146s[index].ArabicText,
+                                  japaneseText: twelevethhour1
+                                      .psalm146s[index].japaneseText,
+                                  englishText: twelevethhour1
+                                      .psalm146s[index].englishText,
+                                  copticText: twelevethhour1
+                                      .psalm146s[index].coptictext,
+                                  arabicText: twelevethhour1
+                                      .psalm146s[index].arabicText,
                                   color:
-                                      Twelevethhour1.psalm146s[index].textcolor,
+                                      twelevethhour1.psalm146s[index].textcolor,
                                   isCheckedJp: isCheckedJp!,
                                   isCheckedEn: isCheckedEn!,
                                   isCheckedCo: isCheckedCo!,
@@ -656,19 +656,19 @@ class _TwelvethHourScreenState extends State<TwelvethHourScreen> {
                         SingleChildScrollView(
                           child: Column(
                             children: List.generate(
-                              Twelevethhour1.psalm147s.length,
+                              twelevethhour1.psalm147s.length,
                               (index) {
                                 return CustomContainer(
-                                  JapaneseText: Twelevethhour1
-                                      .psalm147s[index].JapaneseText,
-                                  EnglishText: Twelevethhour1
-                                      .psalm147s[index].EnglishText,
-                                  CopticText: Twelevethhour1
-                                      .psalm147s[index].Coptictext,
-                                  ArabicText: Twelevethhour1
-                                      .psalm147s[index].ArabicText,
+                                  japaneseText: twelevethhour1
+                                      .psalm147s[index].japaneseText,
+                                  englishText: twelevethhour1
+                                      .psalm147s[index].englishText,
+                                  copticText: twelevethhour1
+                                      .psalm147s[index].coptictext,
+                                  arabicText: twelevethhour1
+                                      .psalm147s[index].arabicText,
                                   color:
-                                      Twelevethhour1.psalm147s[index].textcolor,
+                                      twelevethhour1.psalm147s[index].textcolor,
                                   isCheckedJp: isCheckedJp!,
                                   isCheckedEn: isCheckedEn!,
                                   isCheckedCo: isCheckedCo!,
@@ -682,19 +682,19 @@ class _TwelvethHourScreenState extends State<TwelvethHourScreen> {
                         SingleChildScrollView(
                           child: Column(
                             children: List.generate(
-                              Twelevethhour1.Gospel1.length,
+                              twelevethhour1.gospel1.length,
                               (index) {
                                 return CustomContainer(
-                                  JapaneseText: Twelevethhour1
-                                      .Gospel1[index].JapaneseText,
-                                  EnglishText:
-                                      Twelevethhour1.Gospel1[index].EnglishText,
-                                  CopticText:
-                                      Twelevethhour1.Gospel1[index].Coptictext,
-                                  ArabicText:
-                                      Twelevethhour1.Gospel1[index].ArabicText,
+                                  japaneseText: twelevethhour1
+                                      .gospel1[index].japaneseText,
+                                  englishText:
+                                      twelevethhour1.gospel1[index].englishText,
+                                  copticText:
+                                      twelevethhour1.gospel1[index].coptictext,
+                                  arabicText:
+                                      twelevethhour1.gospel1[index].arabicText,
                                   color:
-                                      Twelevethhour1.Gospel1[index].textcolor,
+                                      twelevethhour1.gospel1[index].textcolor,
                                   isCheckedJp: isCheckedJp!,
                                   isCheckedEn: isCheckedEn!,
                                   isCheckedCo: isCheckedCo!,
@@ -708,19 +708,19 @@ class _TwelvethHourScreenState extends State<TwelvethHourScreen> {
                         SingleChildScrollView(
                           child: Column(
                             children: List.generate(
-                              Twelevethhour1.Litanies1.length,
+                              twelevethhour1.litanies1.length,
                               (index) {
                                 return CustomContainer(
-                                  JapaneseText: Twelevethhour1
-                                      .Litanies1[index].JapaneseText,
-                                  EnglishText: Twelevethhour1
-                                      .Litanies1[index].EnglishText,
-                                  CopticText: Twelevethhour1
-                                      .Litanies1[index].Coptictext,
-                                  ArabicText: Twelevethhour1
-                                      .Litanies1[index].ArabicText,
+                                  japaneseText: twelevethhour1
+                                      .litanies1[index].japaneseText,
+                                  englishText: twelevethhour1
+                                      .litanies1[index].englishText,
+                                  copticText: twelevethhour1
+                                      .litanies1[index].coptictext,
+                                  arabicText: twelevethhour1
+                                      .litanies1[index].arabicText,
                                   color:
-                                      Twelevethhour1.Litanies1[index].textcolor,
+                                      twelevethhour1.litanies1[index].textcolor,
                                   isCheckedJp: isCheckedJp!,
                                   isCheckedEn: isCheckedEn!,
                                   isCheckedCo: isCheckedCo!,
@@ -734,21 +734,21 @@ class _TwelvethHourScreenState extends State<TwelvethHourScreen> {
                         SingleChildScrollView(
                           child: Column(
                             children: List.generate(
-                              Twelevethhour1.GraciouslyAccordOLord1.length,
+                              twelevethhour1.graciouslyAccordOLord1.length,
                               (index) {
                                 return CustomContainer(
-                                  JapaneseText: Twelevethhour1
-                                      .GraciouslyAccordOLord1[index]
-                                      .JapaneseText,
-                                  EnglishText: Twelevethhour1
-                                      .GraciouslyAccordOLord1[index]
-                                      .EnglishText,
-                                  CopticText: Twelevethhour1
-                                      .GraciouslyAccordOLord1[index].Coptictext,
-                                  ArabicText: Twelevethhour1
-                                      .GraciouslyAccordOLord1[index].ArabicText,
-                                  color: Twelevethhour1
-                                      .GraciouslyAccordOLord1[index].textcolor,
+                                  japaneseText: twelevethhour1
+                                      .graciouslyAccordOLord1[index]
+                                      .japaneseText,
+                                  englishText: twelevethhour1
+                                      .graciouslyAccordOLord1[index]
+                                      .englishText,
+                                  copticText: twelevethhour1
+                                      .graciouslyAccordOLord1[index].coptictext,
+                                  arabicText: twelevethhour1
+                                      .graciouslyAccordOLord1[index].arabicText,
+                                  color: twelevethhour1
+                                      .graciouslyAccordOLord1[index].textcolor,
                                   isCheckedJp: isCheckedJp!,
                                   isCheckedEn: isCheckedEn!,
                                   isCheckedCo: isCheckedCo!,
@@ -762,18 +762,18 @@ class _TwelvethHourScreenState extends State<TwelvethHourScreen> {
                         SingleChildScrollView(
                           child: Column(
                             children: List.generate(
-                              Firsthour1.Trisagion.length,
+                              firsthour1.trisagion.length,
                               (index) {
                                 return CustomContainer(
-                                  JapaneseText:
-                                      Firsthour1.Trisagion[index].JapaneseText,
-                                  EnglishText:
-                                      Firsthour1.Trisagion[index].EnglishText,
-                                  CopticText:
-                                      Firsthour1.Trisagion[index].Coptictext,
-                                  ArabicText:
-                                      Firsthour1.Trisagion[index].ArabicText,
-                                  color: Firsthour1.Trisagion[index].textcolor,
+                                  japaneseText:
+                                      firsthour1.trisagion[index].japaneseText,
+                                  englishText:
+                                      firsthour1.trisagion[index].englishText,
+                                  copticText:
+                                      firsthour1.trisagion[index].coptictext,
+                                  arabicText:
+                                      firsthour1.trisagion[index].arabicText,
+                                  color: firsthour1.trisagion[index].textcolor,
                                   isCheckedJp: isCheckedJp!,
                                   isCheckedEn: isCheckedEn!,
                                   isCheckedCo: isCheckedCo!,
@@ -787,18 +787,18 @@ class _TwelvethHourScreenState extends State<TwelvethHourScreen> {
                         SingleChildScrollView(
                           child: Column(
                             children: List.generate(
-                                Twelevethhour1.OurFather1.length, (index) {
+                                twelevethhour1.ourFather1.length, (index) {
                               return CustomContainer(
-                                JapaneseText: Twelevethhour1
-                                    .OurFather1[index].JapaneseText,
-                                EnglishText: Twelevethhour1
-                                    .OurFather1[index].EnglishText,
-                                CopticText:
-                                    Twelevethhour1.OurFather1[index].Coptictext,
-                                ArabicText:
-                                    Twelevethhour1.OurFather1[index].ArabicText,
+                                japaneseText: twelevethhour1
+                                    .ourFather1[index].japaneseText,
+                                englishText: twelevethhour1
+                                    .ourFather1[index].englishText,
+                                copticText:
+                                    twelevethhour1.ourFather1[index].coptictext,
+                                arabicText:
+                                    twelevethhour1.ourFather1[index].arabicText,
                                 color:
-                                    Twelevethhour1.OurFather1[index].textcolor,
+                                    twelevethhour1.ourFather1[index].textcolor,
                                 isCheckedJp: isCheckedJp!,
                                 isCheckedEn: isCheckedEn!,
                                 isCheckedCo: isCheckedCo!,
@@ -811,17 +811,17 @@ class _TwelvethHourScreenState extends State<TwelvethHourScreen> {
                         SingleChildScrollView(
                           child: Column(
                             children: List.generate(
-                                Firsthour1.HailtoYou1.length, (index) {
+                                firsthour1.hailtoYou1.length, (index) {
                               return CustomContainer(
-                                JapaneseText:
-                                    Firsthour1.HailtoYou1[index].JapaneseText,
-                                EnglishText:
-                                    Firsthour1.HailtoYou1[index].EnglishText,
-                                CopticText:
-                                    Firsthour1.HailtoYou1[index].Coptictext,
-                                ArabicText:
-                                    Firsthour1.HailtoYou1[index].ArabicText,
-                                color: Firsthour1.HailtoYou1[index].textcolor,
+                                japaneseText:
+                                    firsthour1.hailtoYou1[index].japaneseText,
+                                englishText:
+                                    firsthour1.hailtoYou1[index].englishText,
+                                copticText:
+                                    firsthour1.hailtoYou1[index].coptictext,
+                                arabicText:
+                                    firsthour1.hailtoYou1[index].arabicText,
+                                color: firsthour1.hailtoYou1[index].textcolor,
                                 isCheckedJp: isCheckedJp!,
                                 isCheckedEn: isCheckedEn!,
                                 isCheckedCo: isCheckedCo!,
@@ -834,20 +834,20 @@ class _TwelvethHourScreenState extends State<TwelvethHourScreen> {
                         SingleChildScrollView(
                           child: Column(
                             children: List.generate(
-                                Firsthour1.IntroductiontotheCreed1.length,
+                                firsthour1.introductiontotheCreed1.length,
                                 (index) {
                               return CustomContainer(
-                                JapaneseText: Firsthour1
-                                    .IntroductiontotheCreed1[index]
-                                    .JapaneseText,
-                                EnglishText: Firsthour1
-                                    .IntroductiontotheCreed1[index].EnglishText,
-                                CopticText: Firsthour1
-                                    .IntroductiontotheCreed1[index].Coptictext,
-                                ArabicText: Firsthour1
-                                    .IntroductiontotheCreed1[index].ArabicText,
-                                color: Firsthour1
-                                    .IntroductiontotheCreed1[index].textcolor,
+                                japaneseText: firsthour1
+                                    .introductiontotheCreed1[index]
+                                    .japaneseText,
+                                englishText: firsthour1
+                                    .introductiontotheCreed1[index].englishText,
+                                copticText: firsthour1
+                                    .introductiontotheCreed1[index].coptictext,
+                                arabicText: firsthour1
+                                    .introductiontotheCreed1[index].arabicText,
+                                color: firsthour1
+                                    .introductiontotheCreed1[index].textcolor,
                                 isCheckedJp: isCheckedJp!,
                                 isCheckedEn: isCheckedEn!,
                                 isCheckedCo: isCheckedCo!,
@@ -860,18 +860,18 @@ class _TwelvethHourScreenState extends State<TwelvethHourScreen> {
                         SingleChildScrollView(
                           child: Column(
                             children: List.generate(
-                                Firsthour1.TheOrthdoxCreed.length, (index) {
+                                firsthour1.theOrthdoxCreed.length, (index) {
                               return CustomContainer(
-                                JapaneseText: Firsthour1
-                                    .TheOrthdoxCreed[index].JapaneseText,
-                                EnglishText: Firsthour1
-                                    .TheOrthdoxCreed[index].EnglishText,
-                                CopticText: Firsthour1
-                                    .TheOrthdoxCreed[index].Coptictext,
-                                ArabicText: Firsthour1
-                                    .TheOrthdoxCreed[index].ArabicText,
+                                japaneseText: firsthour1
+                                    .theOrthdoxCreed[index].japaneseText,
+                                englishText: firsthour1
+                                    .theOrthdoxCreed[index].englishText,
+                                copticText: firsthour1
+                                    .theOrthdoxCreed[index].coptictext,
+                                arabicText: firsthour1
+                                    .theOrthdoxCreed[index].arabicText,
                                 color:
-                                    Firsthour1.TheOrthdoxCreed[index].textcolor,
+                                    firsthour1.theOrthdoxCreed[index].textcolor,
                                 isCheckedJp: isCheckedJp!,
                                 isCheckedEn: isCheckedEn!,
                                 isCheckedCo: isCheckedCo!,
@@ -884,18 +884,18 @@ class _TwelvethHourScreenState extends State<TwelvethHourScreen> {
                         SingleChildScrollView(
                           child: Column(
                             children: List.generate(
-                                Twelevethhour1.HolyHolyHoly1.length, (index) {
+                                twelevethhour1.holyHolyHoly1.length, (index) {
                               return CustomContainer(
-                                JapaneseText: Twelevethhour1
-                                    .HolyHolyHoly1[index].JapaneseText,
-                                EnglishText: Twelevethhour1
-                                    .HolyHolyHoly1[index].EnglishText,
-                                CopticText: Twelevethhour1
-                                    .HolyHolyHoly1[index].Coptictext,
-                                ArabicText: Twelevethhour1
-                                    .HolyHolyHoly1[index].ArabicText,
-                                color: Twelevethhour1
-                                    .HolyHolyHoly1[index].textcolor,
+                                japaneseText: twelevethhour1
+                                    .holyHolyHoly1[index].japaneseText,
+                                englishText: twelevethhour1
+                                    .holyHolyHoly1[index].englishText,
+                                copticText: twelevethhour1
+                                    .holyHolyHoly1[index].coptictext,
+                                arabicText: twelevethhour1
+                                    .holyHolyHoly1[index].arabicText,
+                                color: twelevethhour1
+                                    .holyHolyHoly1[index].textcolor,
                                 isCheckedJp: isCheckedJp!,
                                 isCheckedEn: isCheckedEn!,
                                 isCheckedCo: isCheckedCo!,
@@ -908,17 +908,17 @@ class _TwelvethHourScreenState extends State<TwelvethHourScreen> {
                         SingleChildScrollView(
                           child: Column(
                             children: List.generate(
-                                Firsthour1.OurFather1.length, (index) {
+                                firsthour1.ourFather1.length, (index) {
                               return CustomContainer(
-                                JapaneseText:
-                                    Firsthour1.OurFather1[index].JapaneseText,
-                                EnglishText:
-                                    Firsthour1.OurFather1[index].EnglishText,
-                                CopticText:
-                                    Firsthour1.OurFather1[index].Coptictext,
-                                ArabicText:
-                                    Firsthour1.OurFather1[index].ArabicText,
-                                color: Firsthour1.OurFather1[index].textcolor,
+                                japaneseText:
+                                    firsthour1.ourFather1[index].japaneseText,
+                                englishText:
+                                    firsthour1.ourFather1[index].englishText,
+                                copticText:
+                                    firsthour1.ourFather1[index].coptictext,
+                                arabicText:
+                                    firsthour1.ourFather1[index].arabicText,
+                                color: firsthour1.ourFather1[index].textcolor,
                                 isCheckedJp: isCheckedJp!,
                                 isCheckedEn: isCheckedEn!,
                                 isCheckedCo: isCheckedCo!,
@@ -931,18 +931,18 @@ class _TwelvethHourScreenState extends State<TwelvethHourScreen> {
                         SingleChildScrollView(
                           child: Column(
                             children: List.generate(
-                                Twelevethhour1.TheAbsolution1.length, (index) {
+                                twelevethhour1.theAbsolution1.length, (index) {
                               return CustomContainer(
-                                JapaneseText: Twelevethhour1
-                                    .TheAbsolution1[index].JapaneseText,
-                                EnglishText: Twelevethhour1
-                                    .TheAbsolution1[index].EnglishText,
-                                CopticText: Twelevethhour1
-                                    .TheAbsolution1[index].Coptictext,
-                                ArabicText: Twelevethhour1
-                                    .TheAbsolution1[index].ArabicText,
-                                color: Twelevethhour1
-                                    .TheAbsolution1[index].textcolor,
+                                japaneseText: twelevethhour1
+                                    .theAbsolution1[index].japaneseText,
+                                englishText: twelevethhour1
+                                    .theAbsolution1[index].englishText,
+                                copticText: twelevethhour1
+                                    .theAbsolution1[index].coptictext,
+                                arabicText: twelevethhour1
+                                    .theAbsolution1[index].arabicText,
+                                color: twelevethhour1
+                                    .theAbsolution1[index].textcolor,
                                 isCheckedJp: isCheckedJp!,
                                 isCheckedEn: isCheckedEn!,
                                 isCheckedCo: isCheckedCo!,
@@ -955,19 +955,19 @@ class _TwelvethHourScreenState extends State<TwelvethHourScreen> {
                         SingleChildScrollView(
                           child: Column(
                             children: List.generate(
-                                Twelevethhour1.ConclusionofEverHour1.length,
+                                twelevethhour1.conclusionofEverHour1.length,
                                 (index) {
                               return CustomContainer(
-                                JapaneseText: Twelevethhour1
-                                    .ConclusionofEverHour1[index].JapaneseText,
-                                EnglishText: Twelevethhour1
-                                    .ConclusionofEverHour1[index].EnglishText,
-                                CopticText: Twelevethhour1
-                                    .ConclusionofEverHour1[index].Coptictext,
-                                ArabicText: Twelevethhour1
-                                    .ConclusionofEverHour1[index].ArabicText,
-                                color: Twelevethhour1
-                                    .ConclusionofEverHour1[index].textcolor,
+                                japaneseText: twelevethhour1
+                                    .conclusionofEverHour1[index].japaneseText,
+                                englishText: twelevethhour1
+                                    .conclusionofEverHour1[index].englishText,
+                                copticText: twelevethhour1
+                                    .conclusionofEverHour1[index].coptictext,
+                                arabicText: twelevethhour1
+                                    .conclusionofEverHour1[index].arabicText,
+                                color: twelevethhour1
+                                    .conclusionofEverHour1[index].textcolor,
                                 isCheckedJp: isCheckedJp!,
                                 isCheckedEn: isCheckedEn!,
                                 isCheckedCo: isCheckedCo!,

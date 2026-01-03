@@ -6,7 +6,7 @@ import 'package:koputo1/screens/app_bar.dart';
 class MatthewScreen extends StatelessWidget {
   MatthewScreen({super.key});
 
-  static const MatthewScreenroute = '/matthewscreen';
+  static const matthewScreenroute = '/matthewscreen';
 
   void selectmathewch1(BuildContext context) {
     Navigator.of(context).pushNamed(Chapter1.matthewchapter1route);
@@ -69,7 +69,7 @@ class MatthewScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: appbar(),
-      drawer: const sidebar(),
+      drawer: const Sidebar(),
       body: Column(children: [
         const SizedBox(
           height: 5,

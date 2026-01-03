@@ -38,7 +38,7 @@ void selectEleventhHour(BuildContext context) {
 }
 
 void selectTwelvethHour(BuildContext context) {
-  Navigator.of(context).pushNamed(TwelvethHourScreen.TwelvethHourScreenroute);
+  Navigator.of(context).pushNamed(TwelvethHourScreen.twelvethHourScreenroute);
 }
 
 class _AgpyaScreenState extends State<AgpyaScreen> {
