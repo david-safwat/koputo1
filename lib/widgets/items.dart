@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:koputo1/l10n/app_localizations.dart';
-import 'package:koputo1/screens/Agpya/Agpya_screen.dart';
+import 'package:koputo1/screens/Agpya/agpya_screen.dart';
 import 'package:koputo1/screens/Liturgy/liturgy_screen.dart';
 import 'package:koputo1/screens/Reading/reading_screen.dart';
 import 'package:koputo1/screens/bible_screen.dart';

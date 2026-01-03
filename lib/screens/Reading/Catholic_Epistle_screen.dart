@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:koputo1/screens/Reading/Praxis_screen.dart';
+import 'package:koputo1/screens/Reading/praxis_screen.dart';
 import 'package:koputo1/screens/bible_screen.dart';
 import 'package:koputo1/widgets/custom_ruby_text.dart';
 import 'package:shared_preferences/shared_preferences.dart';

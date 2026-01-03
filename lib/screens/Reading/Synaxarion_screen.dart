@@ -17,7 +17,7 @@ void seclectPsalmandgospel(BuildContext context) {
 }
 
 void seclectPsalmgospel(BuildContext context) {
-  Navigator.of(context).pushNamed(PsalmGosapelScreen.PsalmGosapelScreenroute);
+  Navigator.of(context).pushNamed(PsalmGosapelScreen.psalmGosapelScreenroute);
 }
 
 class _ReadingScreenState extends State<SynaxarionScreen> {

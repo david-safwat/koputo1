@@ -1,10 +1,8 @@
-// ignore_for_file: non_constant_identifier_names, avoid_types_as_parameter_names, constant_identifier_names
-
 import 'package:flutter/material.dart';
 import 'package:koputo1/models/Agpya/ninth_hour.dart';
-import 'package:koputo1/models/Liturgy_Reading/Catholic_Epistle_reading.dart';
-import 'package:koputo1/models/Liturgy_Reading/Pauline_Epistle_reading.dart';
-import 'package:koputo1/models/Liturgy_Reading/Synaxarion_reading.dart';
+import 'package:koputo1/models/Liturgy_Reading/catholic_epistle_reading.dart';
+import 'package:koputo1/models/Liturgy_Reading/pauline_epistle_reading.dart';
+import 'package:koputo1/models/Liturgy_Reading/synaxarion_reading.dart';
 import 'package:koputo1/models/Liturgy_Reading/psalm_gospal_reading.dart';
 import 'package:koputo1/models/psalms_chapters/psalmchapter.dart';
 import 'package:koputo1/widgets/change_font_size.dart';
@@ -16,7 +14,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class PsalmGosapelScreen extends StatefulWidget {
   const PsalmGosapelScreen({super.key});
-  static const PsalmGosapelScreenroute = '/PsalmGosapelScreen';
+  static const psalmGosapelScreenroute = '/PsalmGosapelScreen';
 
   @override
   State<PsalmGosapelScreen> createState() => _PsalmGosapelScreenState();
@@ -95,13 +93,13 @@ class _PsalmGosapelScreenState extends State<PsalmGosapelScreen> {
     _pageController.jumpToPage(page);
   }
 
-  List<PsalmGospalReading>? psalm_gospal_readings =
+  List<PsalmGospalReading>? psalmgospalreadings =
       getReadingsForGregorian_psalm_gospal(DateTime.now());
-  List<PaulineEpistleReading>? Pauline_readings =
+  List<PaulineEpistleReading>? paulinereadings =
       getReadingsForGregorian_Pauline(DateTime.now());
-  List<CatholicEpistleReading>? Catholic_readings =
+  List<CatholicEpistleReading>? catholicreadings =
       getReadingsForGregorian_Catholic(DateTime.now());
-  List<SynaxarionReading>? Synaxarion_readings =
+  List<SynaxarionReading>? synaxarionreadings =
       getReadingsForGregorian_Synaxarion(DateTime.now());
 
   @override
@@ -249,10 +247,10 @@ class _PsalmGosapelScreenState extends State<PsalmGosapelScreen> {
                   ];
                 },
                 body: Consumer2<Psalmchapter, NinthHour>(builder:
-                    (BuildContext context, Psalmchapter, Ninthhour1,
+                    (BuildContext context, psalmchapter, ninthhour1,
                         Widget? child) {
-                  if (psalm_gospal_readings == null ||
-                      psalm_gospal_readings!.isEmpty) {
+                  if (psalmgospalreadings == null ||
+                      psalmgospalreadings!.isEmpty) {
                     return const Center(
                       child: Text("لا يوجد قراءات لهذا اليوم"),
                     );
@@ -272,9 +270,9 @@ class _PsalmGosapelScreenState extends State<PsalmGosapelScreen> {
                             children: [
                               Column(
                                 children: List.generate(
-                                    psalm_gospal_readings!.length, (index) {
+                                    psalmgospalreadings!.length, (index) {
                                   PsalmGospalReading reading =
-                                      psalm_gospal_readings![index];
+                                      psalmgospalreadings![index];
                                   return CustomContainer(
                                     japaneseText: reading.JapaneseText,
                                     englishText: reading.EnglishText,
@@ -291,22 +289,22 @@ class _PsalmGosapelScreenState extends State<PsalmGosapelScreen> {
                               ),
                               Column(
                                 children: List.generate(
-                                    Ninthhour1.introductionofEveryHour1.length,
+                                    ninthhour1.introductionofEveryHour1.length,
                                     (index) {
                                   return CustomContainer(
-                                    japaneseText: Ninthhour1
+                                    japaneseText: ninthhour1
                                         .introductionofEveryHour1[index]
                                         .japaneseText,
-                                    englishText: Ninthhour1
+                                    englishText: ninthhour1
                                         .introductionofEveryHour1[index]
                                         .englishText,
-                                    copticText: Ninthhour1
+                                    copticText: ninthhour1
                                         .introductionofEveryHour1[index]
                                         .coptictext,
-                                    arabicText: Ninthhour1
+                                    arabicText: ninthhour1
                                         .introductionofEveryHour1[index]
                                         .arabicText,
-                                    color: Ninthhour1
+                                    color: ninthhour1
                                         .introductionofEveryHour1[index]
                                         .textcolor,
                                     isCheckedJp: isCheckedJp!,
@@ -323,20 +321,20 @@ class _PsalmGosapelScreenState extends State<PsalmGosapelScreen> {
                         SingleChildScrollView(
                           child: Column(
                             children: List.generate(
-                                Ninthhour1.introductionofEveryHour1.length,
+                                ninthhour1.introductionofEveryHour1.length,
                                 (index) {
                               return CustomContainer(
-                                japaneseText: Ninthhour1
+                                japaneseText: ninthhour1
                                     .introductionofEveryHour1[index]
                                     .japaneseText,
-                                englishText: Ninthhour1
+                                englishText: ninthhour1
                                     .introductionofEveryHour1[index]
                                     .englishText,
-                                copticText: Ninthhour1
+                                copticText: ninthhour1
                                     .introductionofEveryHour1[index].coptictext,
-                                arabicText: Ninthhour1
+                                arabicText: ninthhour1
                                     .introductionofEveryHour1[index].arabicText,
-                                color: Ninthhour1
+                                color: ninthhour1
                                     .introductionofEveryHour1[index].textcolor,
                                 isCheckedJp: isCheckedJp!,
                                 isCheckedEn: isCheckedEn!,

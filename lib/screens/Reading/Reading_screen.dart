@@ -17,7 +17,7 @@ class ReadingScreen extends StatefulWidget {
 
 void seclectPaulineEpistle(BuildContext context) {
   Navigator.of(context)
-      .pushNamed(PaulineEpistleScreen.PaulineEpistleScreenroute);
+      .pushNamed(PaulineEpistleScreen.paulineEpistleScreenroute);
 }
 
 void seclectCatholicEpistle(BuildContext context) {
@@ -39,7 +39,7 @@ void seclectPsalmandgospel(BuildContext context) {
 }
 
 void seclectPsalm(BuildContext context) {
-  Navigator.of(context).pushNamed(PsalmGosapelScreen.PsalmGosapelScreenroute);
+  Navigator.of(context).pushNamed(PsalmGosapelScreen.psalmGosapelScreenroute);
 }
 
 class _ReadingScreenState extends State<ReadingScreen> {

@@ -15,7 +15,7 @@ import 'package:koputo1/models/liturgy%20script/liturgy_menu.dart';
 import 'package:koputo1/models/liturgy%20script/offering_of_the_lamb.dart';
 import 'package:koputo1/models/psalms_chapters/psalmchapter.dart';
 import 'package:koputo1/models/psalms_chapters/psalmmenu.dart';
-import 'package:koputo1/screens/Agpya/Agpya_screen.dart';
+import 'package:koputo1/screens/Agpya/agpya_screen.dart';
 import 'package:koputo1/screens/Agpya/eleventh_hour_screen.dart';
 import 'package:koputo1/screens/Agpya/first_hour_screen.dart';
 import 'package:koputo1/screens/Agpya/ninth_hour_screen.dart';
@@ -241,14 +241,14 @@ class _Koputo1State extends State<Koputo1> {
               Chapter1.matthewchapter1route: (context) => const Chapter1(),
               SettingScreen.settingcreenroute: (context) =>
                   const SettingScreen(),
-              PaulineEpistleScreen.PaulineEpistleScreenroute: (context) =>
+              PaulineEpistleScreen.paulineEpistleScreenroute: (context) =>
                   const PaulineEpistleScreen(),
               CatholicEpistleScreen.catholicEpistleScreenroute: (context) =>
                   const CatholicEpistleScreen(),
               PraxisScreen.praxisscreenroute: (context) => const PraxisScreen(),
               PsalmandgospelScreen.psalmandgospelScreenroute: (context) =>
                   const PsalmGosapelScreen(),
-              PsalmGosapelScreen.PsalmGosapelScreenroute: (context) =>
+              PsalmGosapelScreen.psalmGosapelScreenroute: (context) =>
                   const PsalmandgospelScreen(),
               SynaxarionScreen.synaxarionScreenroute: (context) =>
                   const SynaxarionScreen(),

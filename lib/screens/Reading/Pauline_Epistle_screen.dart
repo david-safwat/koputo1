@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:koputo1/screens/Reading/Catholic_Epistle_screen.dart';
+import 'package:koputo1/screens/Reading/catholic_epistle_screen.dart';
 import 'package:koputo1/screens/bible_screen.dart';
 import 'package:koputo1/widgets/custom_ruby_text.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -8,7 +8,7 @@ import 'package:koputo1/widgets/custom_container/custom_container_3.dart';
 
 class PaulineEpistleScreen extends StatefulWidget {
   const PaulineEpistleScreen({super.key});
-  static const PaulineEpistleScreenroute = '/PaulineEpistleScreenroute';
+  static const paulineEpistleScreenroute = '/PaulineEpistleScreenroute';
 
   @override
   State<PaulineEpistleScreen> createState() => _ReadingScreenState();
