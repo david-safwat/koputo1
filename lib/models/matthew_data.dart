@@ -1,42 +1,42 @@
-class matthewdata {
+class MatthewData {
   final int id;
   final String title;
 
-  const matthewdata({
+  const MatthewData({
     required this.id,
     required this.title,
   });
 }
 
-const matthew_data = [
-  matthewdata(id: 1, title: 'chapter1'),
-  matthewdata(id: 2, title: 'chapter2'),
-  matthewdata(id: 3, title: 'chapter3'),
-  matthewdata(id: 4, title: 'chapter4'),
-  matthewdata(id: 5, title: 'chapter5'),
-  matthewdata(id: 6, title: 'chapter6'),
-  matthewdata(id: 6, title: 'chapter7'),
-  matthewdata(id: 8, title: 'chapter8'),
-  matthewdata(id: 9, title: 'chapter9'),
-  matthewdata(id: 10, title: 'chapter10'),
-  matthewdata(id: 11, title: 'chapter11'),
-  matthewdata(id: 12, title: 'chapter12'),
-  matthewdata(id: 13, title: 'chapter13'),
-  matthewdata(id: 14, title: 'chapter14'),
-  matthewdata(id: 15, title: 'chapter15'),
-  matthewdata(id: 16, title: 'chapter16'),
-  matthewdata(id: 17, title: 'chapter17'),
-  matthewdata(id: 18, title: 'chapter18'),
-  matthewdata(id: 19, title: 'chapter19'),
-  matthewdata(id: 20, title: 'chapter20'),
-  matthewdata(id: 21, title: 'chapter21'),
-  matthewdata(id: 22, title: 'chapter22'),
-  matthewdata(id: 23, title: 'chapter23'),
-  matthewdata(id: 24, title: 'chapter24'),
-  matthewdata(id: 25, title: 'chapter25'),
-  matthewdata(id: 26, title: 'chapter26'),
-  matthewdata(id: 27, title: 'chapter27'),
-  matthewdata(id: 28, title: 'chapter28'),
+const matthewdata = [
+  MatthewData(id: 1, title: 'chapter1'),
+  MatthewData(id: 2, title: 'chapter2'),
+  MatthewData(id: 3, title: 'chapter3'),
+  MatthewData(id: 4, title: 'chapter4'),
+  MatthewData(id: 5, title: 'chapter5'),
+  MatthewData(id: 6, title: 'chapter6'),
+  MatthewData(id: 6, title: 'chapter7'),
+  MatthewData(id: 8, title: 'chapter8'),
+  MatthewData(id: 9, title: 'chapter9'),
+  MatthewData(id: 10, title: 'chapter10'),
+  MatthewData(id: 11, title: 'chapter11'),
+  MatthewData(id: 12, title: 'chapter12'),
+  MatthewData(id: 13, title: 'chapter13'),
+  MatthewData(id: 14, title: 'chapter14'),
+  MatthewData(id: 15, title: 'chapter15'),
+  MatthewData(id: 16, title: 'chapter16'),
+  MatthewData(id: 17, title: 'chapter17'),
+  MatthewData(id: 18, title: 'chapter18'),
+  MatthewData(id: 19, title: 'chapter19'),
+  MatthewData(id: 20, title: 'chapter20'),
+  MatthewData(id: 21, title: 'chapter21'),
+  MatthewData(id: 22, title: 'chapter22'),
+  MatthewData(id: 23, title: 'chapter23'),
+  MatthewData(id: 24, title: 'chapter24'),
+  MatthewData(id: 25, title: 'chapter25'),
+  MatthewData(id: 26, title: 'chapter26'),
+  MatthewData(id: 27, title: 'chapter27'),
+  MatthewData(id: 28, title: 'chapter28'),
 ];
 
 final List<String> chapternumber = [

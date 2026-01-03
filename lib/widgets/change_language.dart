@@ -169,25 +169,25 @@ class ChangeLaunguageSetting extends ChangeNotifier {
   bool? get checkAr => isCheckedAr;
   Locale get currentLocale => _locale;
 
-  void CheckJp(bool checkjp) {
+  void checkJpLang(bool checkjp) {
     isCheckedJp = checkjp;
     savecheckboxJp(checkjp);
     notifyListeners();
   }
 
-  void CheckEn(bool checken) {
+  void checkEnLang(bool checken) {
     isCheckedEn = checken;
     savecheckboxEn(checken);
     notifyListeners();
   }
 
-  void CheckCo(bool checkco) {
+  void checkCoLang(bool checkco) {
     isCheckedCo = checkco;
     savecheckboxCo(checkco);
     notifyListeners();
   }
 
-  void CheckAr(bool checkar) {
+  void checkArLang(bool checkar) {
     isCheckedAr = checkar;
     savecheckboxAr(checkar);
     notifyListeners();

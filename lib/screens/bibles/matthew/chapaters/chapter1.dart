@@ -9,10 +9,10 @@ class Chapter1 extends StatefulWidget {
   static const matthewchapter1route = '/matthewchapter1s';
 
   @override
-  State<Chapter1> createState() => chapter1();
+  State<Chapter1> createState() => Chapterone();
 }
 
-class chapter1 extends State<Chapter1> {
+class Chapterone extends State<Chapter1> {
   List<bool> isaddlist = List.generate(30, (index) => false);
   final List<bool> _isvisible = [
     false,
@@ -47,7 +47,6 @@ class chapter1 extends State<Chapter1> {
   ];
   late SharedPreferences _prefs;
 
-  @override
   void initstate() {
     super.initState();
     _loadvisibiltystate();

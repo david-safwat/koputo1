@@ -10,7 +10,7 @@ class PsalmsChapters {
 }
 
 //list of Plamchapters
-List<PsalmsChapters> Psalms_chapter = [
+List<PsalmsChapters> psalmschapter = [
   PsalmsChapters(id: 1, biblecategory: '詩編', title: 'chapter 1'),
   PsalmsChapters(id: 2, biblecategory: '詩編', title: 'chapter 2'),
   PsalmsChapters(id: 3, biblecategory: '詩編', title: 'chapter 3'),

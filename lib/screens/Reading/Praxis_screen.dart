@@ -8,14 +8,14 @@ import 'package:koputo1/widgets/custom_container/custom_container_3.dart';
 
 class PraxisScreen extends StatefulWidget {
   const PraxisScreen({super.key});
-  static const Praxisscreenroute = '/Praxisscreen';
+  static const praxisscreenroute = '/Praxisscreen';
 
   @override
   State<PraxisScreen> createState() => _ReadingScreenState();
 }
 
 void seclectSynaxarion(BuildContext context) {
-  Navigator.of(context).pushNamed(SynaxarionScreen.SynaxarionScreenroute);
+  Navigator.of(context).pushNamed(SynaxarionScreen.synaxarionScreenroute);
 }
 
 class _ReadingScreenState extends State<PraxisScreen> {

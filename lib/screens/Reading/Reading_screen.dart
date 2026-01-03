@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:koputo1/screens/Reading/Catholic_Epistle_screen.dart';
 import 'package:koputo1/screens/Reading/Pauline_Epistle_screen.dart';
 import 'package:koputo1/screens/Reading/Praxis_screen.dart';
-import 'package:koputo1/screens/Reading/psalm_Gosapel_screen.dart';
+import 'package:koputo1/screens/Reading/psalm_gosapel_screen.dart';
 import 'package:koputo1/screens/Reading/psalmandGospel_screen.dart';
 import 'package:koputo1/screens/Reading/synaxarion_screen.dart';
 import 'package:koputo1/widgets/custom_ruby_text.dart';
@@ -26,11 +26,11 @@ void seclectCatholicEpistle(BuildContext context) {
 }
 
 void seclectPraxis(BuildContext context) {
-  Navigator.of(context).pushNamed(PraxisScreen.Praxisscreenroute);
+  Navigator.of(context).pushNamed(PraxisScreen.praxisscreenroute);
 }
 
 void seclectSynaxarion(BuildContext context) {
-  Navigator.of(context).pushNamed(SynaxarionScreen.SynaxarionScreenroute);
+  Navigator.of(context).pushNamed(SynaxarionScreen.synaxarionScreenroute);
 }
 
 void seclectPsalmandgospel(BuildContext context) {

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:koputo1/screens/Reading/psalm_Gosapel_screen.dart';
+import 'package:koputo1/screens/Reading/psalm_gosapel_screen.dart';
 import 'package:koputo1/screens/Reading/psalmandGospel_screen.dart';
 import 'package:koputo1/widgets/custom_ruby_text.dart';
 
 class SynaxarionScreen extends StatefulWidget {
   const SynaxarionScreen({super.key});
-  static const SynaxarionScreenroute = '/SynaxarionScreen';
+  static const synaxarionScreenroute = '/SynaxarionScreen';
 
   @override
   State<SynaxarionScreen> createState() => _ReadingScreenState();

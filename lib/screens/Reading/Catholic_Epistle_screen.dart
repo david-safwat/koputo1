@@ -16,7 +16,7 @@ class CatholicEpistleScreen extends StatefulWidget {
 }
 
 void seclectPraxis(BuildContext context) {
-  Navigator.of(context).pushNamed(PraxisScreen.Praxisscreenroute);
+  Navigator.of(context).pushNamed(PraxisScreen.praxisscreenroute);
 }
 
 class _ReadingScreenState extends State<CatholicEpistleScreen> {

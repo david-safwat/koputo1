@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:koputo1/screens/Liturgy/liturgy_of_the_Faithful_screen.dart';
+import 'package:koputo1/screens/Liturgy/liturgy_of_the_faithful_screen.dart';
 import 'package:koputo1/screens/bible_screen.dart';
 import 'package:koputo1/widgets/custom_ruby_text.dart';
 import 'package:shared_preferences/shared_preferences.dart';

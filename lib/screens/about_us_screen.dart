@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:koputo1/models/liturgy%20script/liturgyoftheWord.dart';
+import 'package:koputo1/models/liturgy%20script/liturgy_of_the_word.dart';
 import 'package:koputo1/screens/Reading/reading_screen.dart';
 import 'package:koputo1/widgets/custom_container/Custom_Container.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -43,7 +43,7 @@ class _AboutUsScreenState extends State<AboutUsScreen> {
   }
 
   // save the selected font size to shared preferences
-  Future<void> _saveFontSize(double fontsize) async {
+  Future<void> saveFontSize(double fontsize) async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setDouble('fontsize', fontsize);
   }
@@ -57,7 +57,7 @@ class _AboutUsScreenState extends State<AboutUsScreen> {
   }
 
   // save the selected check value to shared preferences
-  Future<void> _savecheckboxJp(bool checkjp) async {
+  Future<void> savecheckboxJp(bool checkjp) async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setBool('checkjp', checkjp);
   }
@@ -71,7 +71,7 @@ class _AboutUsScreenState extends State<AboutUsScreen> {
   }
 
   // save the selected check value to shared preferences
-  Future<void> _savecheckboxEn(bool checkEn) async {
+  Future<void> savecheckboxEn(bool checkEn) async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setBool('checkEn', checkEn);
   }
@@ -85,7 +85,7 @@ class _AboutUsScreenState extends State<AboutUsScreen> {
   }
 
   // save the selected check value to shared preferences
-  Future<void> _savecheckboxCo(bool checkCo) async {
+  Future<void> savecheckboxCo(bool checkCo) async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setBool('checkCo', checkCo);
   }
@@ -99,7 +99,7 @@ class _AboutUsScreenState extends State<AboutUsScreen> {
   }
 
   // save the selected check value to shared preferences
-  Future<void> _savecheckboxAr(bool checkAr) async {
+  Future<void> savecheckboxAr(bool checkAr) async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setBool('checkAr', checkAr);
   }

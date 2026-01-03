@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:koputo1/pages/widgetspages/sliver_appbar_page.dart';
 import 'package:koputo1/screens/Liturgy/Distribution_screen.dart';
-import 'package:koputo1/screens/Liturgy/liturgy_of_the_Faithful_screen.dart';
-import 'package:koputo1/screens/Liturgy/liturgy_of_the_Word_screen.dart';
-import 'package:koputo1/screens/Liturgy/offering_of_the_Lamb_screen.dart';
+import 'package:koputo1/screens/Liturgy/liturgy_of_the_faithful_screen.dart';
+import 'package:koputo1/screens/Liturgy/liturgy_of_the_word_screen.dart';
+import 'package:koputo1/screens/Liturgy/offering_of_the_lamb_screen.dart';
 import 'package:koputo1/widgets/change_font_size.dart';
 import 'package:provider/provider.dart';
 import 'package:koputo1/l10n/app_localizations.dart';

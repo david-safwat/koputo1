@@ -16,19 +16,19 @@ class Changelanguagepage extends StatelessWidget {
           isCheckedCo: change.checkCo!,
           isCheckedAr: change.checkAr!,
           onchangejp: (bool? newvalue) {
-            change.CheckJp(newvalue!);
+            change.checkJpLang(newvalue!);
             change.savecheckboxJp(newvalue);
           },
           onchangeen: (bool? newvalue) {
-            change.CheckEn(newvalue!);
+            change.checkEnLang(newvalue!);
             change.savecheckboxEn(newvalue);
           },
           onchangeco: (bool? newvalue) {
-            change.CheckCo(newvalue!);
+            change.checkCoLang(newvalue!);
             change.savecheckboxCo(newvalue);
           },
           onchangear: (bool? newvalue) {
-            change.CheckAr(newvalue!);
+            change.checkArLang(newvalue!);
             change.savecheckboxAr(newvalue);
           },
         );

@@ -9,8 +9,8 @@ import 'package:koputo1/models/Agpya/ninth_hour.dart';
 import 'package:koputo1/models/Agpya/sixtth_hour.dart';
 import 'package:koputo1/models/Agpya/third_hour.dart';
 import 'package:koputo1/models/check_box_language.dart';
-import 'package:koputo1/models/liturgy%20script/liturgyoftheFaithful.dart';
-import 'package:koputo1/models/liturgy%20script/liturgyoftheWord.dart';
+import 'package:koputo1/models/liturgy%20script/liturgy_of_the_faithful.dart';
+import 'package:koputo1/models/liturgy%20script/liturgy_of_the_word.dart';
 import 'package:koputo1/models/liturgy%20script/liturgy_menu.dart';
 import 'package:koputo1/models/liturgy%20script/offering_of_the_lamb.dart';
 import 'package:koputo1/models/psalms_chapters/psalmchapter.dart';
@@ -22,11 +22,11 @@ import 'package:koputo1/screens/Agpya/ninth_hour_screen.dart';
 import 'package:koputo1/screens/Agpya/sixth_hour_screen.dart';
 import 'package:koputo1/screens/Agpya/third_hour_screen.dart';
 import 'package:koputo1/screens/Agpya/twelveth_hour_screen.dart';
-import 'package:koputo1/screens/Liturgy/offering_of_the_Lamb_screen.dart';
-import 'package:koputo1/screens/Reading/catholic_Epistle_screen.dart';
-import 'package:koputo1/screens/Reading/pauline_Epistle_screen.dart';
+import 'package:koputo1/screens/Liturgy/offering_of_the_lamb_screen.dart';
+import 'package:koputo1/screens/Reading/catholic_epistle_screen.dart';
+import 'package:koputo1/screens/Reading/pauline_epistle_screen.dart';
 import 'package:koputo1/screens/Reading/praxis_screen.dart';
-import 'package:koputo1/screens/Reading/psalm_Gosapel_screen.dart';
+import 'package:koputo1/screens/Reading/psalm_gosapel_screen.dart';
 import 'package:koputo1/screens/Reading/psalmandGospel_screen.dart';
 import 'package:koputo1/screens/Reading/reading_screen.dart';
 import 'package:koputo1/screens/Reading/synaxarion_screen.dart';
@@ -41,8 +41,8 @@ import 'package:koputo1/screens/tab_screen.dart';
 import 'package:koputo1/widgets/change_font_size.dart';
 import 'package:koputo1/widgets/change_language.dart';
 import 'package:koputo1/widgets/items.dart';
-import 'package:koputo1/screens/Liturgy/liturgy_of_the_Word_screen.dart';
-import 'package:koputo1/screens/Liturgy/liturgy_of_the_Faithful_screen.dart';
+import 'package:koputo1/screens/Liturgy/liturgy_of_the_word_screen.dart';
+import 'package:koputo1/screens/Liturgy/liturgy_of_the_faithful_screen.dart';
 import 'package:koputo1/screens/Liturgy/liturgy_screen.dart';
 import 'package:koputo1/screens/Liturgy/distribution_screen.dart';
 import 'package:koputo1/widgets/pageprovider.dart';
@@ -245,12 +245,12 @@ class _Koputo1State extends State<Koputo1> {
                   const PaulineEpistleScreen(),
               CatholicEpistleScreen.catholicEpistleScreenroute: (context) =>
                   const CatholicEpistleScreen(),
-              PraxisScreen.Praxisscreenroute: (context) => const PraxisScreen(),
+              PraxisScreen.praxisscreenroute: (context) => const PraxisScreen(),
               PsalmandgospelScreen.psalmandgospelScreenroute: (context) =>
                   const PsalmGosapelScreen(),
               PsalmGosapelScreen.PsalmGosapelScreenroute: (context) =>
                   const PsalmandgospelScreen(),
-              SynaxarionScreen.SynaxarionScreenroute: (context) =>
+              SynaxarionScreen.synaxarionScreenroute: (context) =>
                   const SynaxarionScreen(),
               OfferingofthelambScreen.offeringOfTheLambScreenRoute: (context) =>
                   const OfferingofthelambScreen(),

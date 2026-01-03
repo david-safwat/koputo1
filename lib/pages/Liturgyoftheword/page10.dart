@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:koputo1/models/liturgy%20script/liturgyoftheWord.dart';
+import 'package:koputo1/models/liturgy%20script/liturgy_of_the_word.dart';
 import 'package:koputo1/widgets/reading_page.dart';
 import 'package:koputo1/widgets/change_font_size.dart';
 import 'package:koputo1/widgets/change_language.dart';
